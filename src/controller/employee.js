@@ -1,6 +1,6 @@
-const mongoose = require('mongoose')
 const express = require('express')
 const Router = express.Router
+const { createEmployee, getAllEmployees } = require('./employee-functionality')
 
 const controller = new Router()
 
@@ -10,6 +10,10 @@ controller.use('/', (req, res, next) => {
 })
 
 controller.get('/', (req, res, next) => {
-  console.log('yay i am working here!')
+  getAllEmployees(req, res)
+})
+
+controller.post('/', (req, res) => {
+  createEmployee(req, res)
 })
 module.exports = controller
