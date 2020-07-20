@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
-const Router = require('express').Router()
+const express = require('express')
+const Router = express.Router
 
 const controller = new Router()
 
