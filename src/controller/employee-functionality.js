@@ -62,16 +62,22 @@ async function createEmployee (req, res){
 async function getEmployeeByEmployeeID(req, res){
   try {
     const returnedEmployee = await Employee.findOne({employeeID: req.params.employeeID})
-    if(await checkPin(req.query.pin, returnedEmployee.pin)){
-      res.send(returnedEmployee)
+    if(returnedEmployee){
+      if(await checkPin(req.query.pin, returnedEmployee.pin)){
+        res.status(200).json({
+          "message": `Welcome, ${returnedEmployee.name.first}`,
+          "employee": returnedEmployee
+        })
+      } else {
+        res.status(401).json({
+          "message": "Unauthorised access. Try again with correct details"
+        })
+      }
     } else {
-      res.status(401).json({
-        "message": "Unauthorised access. Try again with correct details"
+      res.status(404).json({
+        "message": "Unable to be found. Please register for an account"
       })
     }
-
-
-
   } catch (error){
     console.log(error)
   }
@@ -81,17 +87,14 @@ async function getEmployeeByEmployeeID(req, res){
 async function checkPin (pin, returnedEmployeePin) {
   try {
     const match = await bcrypt.compare(pin, returnedEmployeePin.toString() )
-
     if(!match){
       return false
     } else {
       return true
     }
-
   } catch (error) {
       console.log(error)
   }
-
 }
 
 // UPDATE 
@@ -99,12 +102,28 @@ async function checkPin (pin, returnedEmployeePin) {
 // DELETE
 async function deleteEmployee (req, res){
   try {
-    const deletedEmployee = await Employee.findOneAndDelete({employeeID: 'r7jTG7d6gy5wGO4L'})
-    res.status(200).json({
-      "message": `${deletedEmployee.employeeID} has been successfully deleted`
-    })
+    const returnedEmployee = await Employee.findOne({employeeID: req.params.employeeID})
+
+    if(returnedEmployee){
+      if(await checkPin(req.query.pin, returnedEmployee.pin)){
+        returnedEmployee.deleteOne()
+        res.status(200).json({
+          "response": `Employee: ${returnedEmployee.employeeID} (${returnedEmployee.name.first} ${returnedEmployee.name.last}) has been successfully deleted`
+        })
+      } else {
+        res.status(401).json({
+          "message": "Unauthorised access. Try again with correct details"
+        })
+      }
+    } else {
+      res.status(404).json({
+        "message": "Unable to be found. Please register for an account"
+      })
+    }
   } catch (error){
-    console.log(error)
+    res.status(500).json({
+      "message": error
+    })
   }
 }
 module.exports = {
