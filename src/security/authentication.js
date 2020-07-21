@@ -26,7 +26,7 @@ const roles = {
       })
     }
   },
-  FirstCateringLtd_BowsFormulaOne: () => {
+  FirstCateringLtd_BowsFormulaOne: (req, res, next) => {
     if(req.auth.user === 'first-catering' || req.auth.user === 'bows-formula-one'){
       next()
     } else {

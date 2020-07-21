@@ -8,10 +8,19 @@ async function getAllEmployees (req, res){
     // GET ALL WITH LOW BALANCE
     if(req.query.lowBalance){
       returnedEmployees = await Employee.find({accountBalance: {$lte: 2.00}})
-      if(returnedEmployees.length === 0){
-        res.status(404).json({
-          "message": "No Employee's with balance lower than £2.00"
+      
+      if(req.auth.user === 'first-catering'){
+        res.status(401).json({
+          "message": "Unauthorised access. Try again with correct details"
         })
+      } else {
+        if(returnedEmployees.length === 0){
+          res.status(404).json({
+            "message": "No Employee's with balance lower than £2.00"
+          })
+        } else {
+          res.send(returnedEmployees)
+        }
       }
     } else {
       returnedEmployees = await Employee.find()
@@ -23,12 +32,7 @@ async function getAllEmployees (req, res){
     } else {
       res.send(returnedEmployees)
     }
-
   } catch (error) {
-    console.log(error)
-    res.status(401).json({
-      "message": "unauthorised access"
-    })
     res.status(500).json({
       "message": error
     })
@@ -60,12 +64,11 @@ async function createEmployee (req, res){
 
 // GET BY EMPLOYEE ID
 async function getEmployeeByEmployeeID(req, res){
-
-  console.log(req.headers.authorisation)
   try {
     const returnedEmployee = await Employee.findOne({employeeID: req.params.employeeID})
+
     if(returnedEmployee){
-      if(await checkPin(req.query.pin, returnedEmployee.pin)){
+      if(await checkPin(req.auth.password, returnedEmployee.pin)){
         res.status(200).json({
           "message": `Welcome, ${returnedEmployee.name.first}`,
           "employee": returnedEmployee
