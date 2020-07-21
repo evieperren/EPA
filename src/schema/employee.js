@@ -35,7 +35,7 @@ const EmployeeSchema = mongoose.Schema({
     minLength: 16,
   },
   pin: {
-    type: Number,
+    type: String,
     required: true,
   },
   accountBalance: {
