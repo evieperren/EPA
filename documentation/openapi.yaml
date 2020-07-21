@@ -11,12 +11,19 @@ tags:
     description: Catering Service
 
 paths:
-  /bows-formula-one:
+  /bows_formula_one:
     get:
       tags:
         - Bows Formula One High Performance Cars
       summary: Get all employees
       description: Retrieves all employees
+      parameters:
+        - name: lowBalance
+          in: query
+          required: true
+          description: Filter employee by low balance
+          schema:
+            type: string
       operationId: getEmployees
       responses:
         200:
@@ -65,45 +72,8 @@ paths:
                 $ref: '#/components/responses/400'
         500:
           description: "Unexpected Error"
-    
-  /bows-formula-one/{lowBalance}:
-    get:
-      tags:
-        - Bows Formula One High Performance Cars
-      summary: Get employees with low balance
-      description: Retrieves employees with low balance
-      parameters:
-        - name: lowBalance
-          in: query
-          required: true
-          description: Filter employee by low balance
-          schema:
-            type: string
-      operationId: getEmployeeBylowBalance
-      responses:
-        200:
-          description: "OK"
-          content:
-            application/json:
-              schema:
-                type: "array"
-                items:
-                  $ref: "#/components/responses/200"
-        404:
-          description: "Employees not found"
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/lowBalanceResponse"
-        500:
-          description: "Unexpected Error"
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/responses/500' 
-      
 
-  /bows-formula-one/{employeeID}/{pin}: 
+  /bows_formula_one/{employeeID}: 
     get:
       tags:
         - Bows Formula One High Performance Cars
@@ -114,12 +84,6 @@ paths:
           in: path
           required: true
           description: Filter employee by employee ID
-          schema:
-            type: string
-        - name: pin
-          in: path
-          required: true
-          description: Check correct details by employee PIN
           schema:
             type: string
       operationId: getAnEmployee
@@ -160,12 +124,6 @@ paths:
           description: Filter employee by employee ID
           schema:
             type: string
-        - name: pin
-          in: path
-          required: true
-          description: Check correct details by employee PIN
-          schema:
-            type: string
       responses:
         200:
           description: "EmployeeID has been successfully deleted"
@@ -203,12 +161,6 @@ paths:
           in: path
           required: true
           description: Filter Employee by Employee ID
-          schema:
-            type: string
-        - name: pin
-          in: path
-          required: true
-          description: Check correct details by employee PIN
           schema:
             type: string
       requestBody:
@@ -278,9 +230,9 @@ components:
           type: "string"
           example: "r7jTG7dqBy5wGO4L"
         pin: 
-          type: "number"
+          type: "string"
           format: "password"
-          example: "1234"
+          example: "$2b$10$rMD28G3SwZ8HJ3WilVxieutOyXGOJKRPzTMmjLIOEq8To6cBoqb8a"
         accountBalance: 
           type: "number"
           example: "6.50"
@@ -328,9 +280,9 @@ components:
           type: "string"
           example: "r7jTG7dqBy5wGO4L"
         pin: 
-          type: "number"
+          type: "string"
           format: "password"
-          example: "1234"
+          example: "$2b$10$rMD28G3SwZ8HJ3WilVxieutOyXGOJKRPzTMmjLIOEq8To6cBoqb8a"
         accountBalance: 
           type: "number"
           example: "6.50"
@@ -397,13 +349,6 @@ parameters:
     required: true
     schema:
       type: string
-  pin:
-    name: pin
-    in: path
-    description: PIN for employee's
-    required: true
-    schema:
-      type: number
   lowBalance:
     name: lowBalance
     in: query
