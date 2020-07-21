@@ -1,5 +1,6 @@
 const Employee = require('../model/employee')
-const { checkPin, hashPin} = require('../encrypt/encrypt')
+const { checkPin, hashPin } = require('../encrypt/encrypt')
+const { validationResult } = require('express-validator')
 
 // GET ALL 
 async function getAllEmployees (req, res){
@@ -53,10 +54,16 @@ async function createEmployee (req, res){
       }
     })
 
+    const errors = await validationResult(req)
+    if(!errors.isEmpty()){
+      res.status(400).json({
+        "message": errors.array()
+      })
+    } else {
+      res.send(newEmployee)
+      newEmployee.save()
+    }
     
-    res.send(newEmployee)
-    newEmployee.save()
-
   } catch (error) {
     res.status(500).json({
       "message": error
@@ -115,12 +122,20 @@ async function updateEmployee (req, res){
           returnedEmployee.accountBalance = req.body.accountBalance || returnedEmployee.accountBalance
           returnedEmployee.visits.last = returnedEmployee.visits.current
           returnedEmployee.visits.current = new Date()
-          returnedEmployee.save()
 
-          res.status(200).json({
-            "message": `Welcome, ${returnedEmployee.name.first}`,
-            "response": returnedEmployee
-          })
+
+          const errors = await validationResult(req)
+          if(!errors.isEmpty()){
+            res.status(400).json({
+              "message": errors.array()
+            })
+          } else {
+            returnedEmployee.save()
+            res.status(200).json({
+              "message": `Welcome, ${returnedEmployee.name.first}`,
+              "response": returnedEmployee
+            })
+          }
         } else {
           res.status(401).json({
             "message": "Unauthorised access. Try again with correct details"
@@ -137,12 +152,19 @@ async function updateEmployee (req, res){
         returnedEmployee.visits.last = returnedEmployee.visits.current
         returnedEmployee.visits.current =  new Date()
         
-        returnedEmployee.save()
-        res.status(200).json({
-          "message": `Welcome, ${returnedEmployee.name.first}`,
-          "response": returnedEmployee
-        })
-      }
+        const errors = await validationResult(req)
+        if(!errors.isEmpty()){
+          res.status(400).json({
+            "message": errors.array()
+          })
+        } else {
+          returnedEmployee.save()
+          res.status(200).json({
+            "message": `Welcome, ${returnedEmployee.name.first}`,
+            "response": returnedEmployee
+          })
+        }
+    }
     } else {
       // this is not working 
       res.status(404).json({
@@ -161,9 +183,9 @@ async function deleteEmployee (req, res){
     const returnedEmployee = await Employee.findOne({employeeID: req.params.employeeID})
 
     if(returnedEmployee){
-      if(req.auth.user === 'bow-formula-one-employee'){
+      if(req.auth.user === 'bows-formula-one-employee'){
         if(await checkPin(req.auth.password, returnedEmployee.pin)){
-          returnedEmployee.deleteOne()
+          await Employee.findOneAndDelete({employeeID: req.params.employeeID})
           res.status(200).json({
             "response": `Employee: ${returnedEmployee.employeeID} (${returnedEmployee.name.first} ${returnedEmployee.name.last}) has been successfully deleted`
           })
@@ -173,6 +195,7 @@ async function deleteEmployee (req, res){
           })
         }
       } else {
+        // await Employee.findOneAndDelete({employeeID: req.params.employeeID})
         res.status(200).json({
           "response": `Employee: ${returnedEmployee.employeeID} (${returnedEmployee.name.first} ${returnedEmployee.name.last}) has been successfully deleted`
         })
