@@ -60,6 +60,8 @@ async function createEmployee (req, res){
 
 // GET BY EMPLOYEE ID
 async function getEmployeeByEmployeeID(req, res){
+
+  console.log(req.headers.authorisation)
   try {
     const returnedEmployee = await Employee.findOne({employeeID: req.params.employeeID})
     if(returnedEmployee){
@@ -100,7 +102,10 @@ async function updateEmployee (req, res){
       returnedEmployee.visits.last = req.body.visits.last || returnedEmployee.visits.last
 
       returnedEmployee.save()
-      res.send(returnedEmployee)
+      res.status(200).json({
+        "message": `Welcome, ${returnedEmployee.name.first}`,
+        "response": returnedEmployee
+      })
 
     } else {
       res.status(404).json({
