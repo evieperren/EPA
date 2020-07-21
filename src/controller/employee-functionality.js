@@ -81,7 +81,6 @@ async function getEmployeeByEmployeeID(req, res){
         }
       } else {
         returnedEmployee.visits.last = new Date()
-        console.log(returnedEmployee)
         res.status(200).json({
           "message": `Welcome, ${returnedEmployee.name.first}`,
           "employee": returnedEmployee
@@ -102,7 +101,6 @@ async function getEmployeeByEmployeeID(req, res){
 async function updateEmployee (req, res){
   try {
     const returnedEmployee = await Employee.findOne({employeeID: req.params.employeeID})
-    console.log(req.auth.user)
     if(returnedEmployee){
       if(req.auth.user === 'bows-formula-one-employee'){
         if(await checkPin(req.auth.password, returnedEmployee.pin)){
@@ -135,8 +133,7 @@ async function updateEmployee (req, res){
         returnedEmployee.pin = await hashPin(req) || returnedEmployee.pin
         returnedEmployee.accountBalance = req.body.accountBalance || returnedEmployee.accountBalance
         returnedEmployee.visits.last = returnedEmployee.visits.current
-          returnedEmployee.visits.current =  new Date()
-          console.log(returnedEmployee.visits.last)
+        returnedEmployee.visits.current =  new Date()
         
         returnedEmployee.save()
         res.status(200).json({
