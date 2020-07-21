@@ -1,17 +1,25 @@
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
-const myPlaintextPassword = 's0/\/\P4$$w0rD';
-const someOtherPlaintextPassword = 'not_bacon';
-let hashed = ''
-bcrypt.hash(myPlaintextPassword, saltRounds).then((hash) => {
-  hashed = hash
-  console.log(hashed)
-})
-bcrypt.compare(myPlaintextPassword, hashed).then((result) => {
-  console.log(result)
-})
 
-async function checkPin (pin) {
-  const 
-  const match = await bcrypt.compare(pin, )
+async function checkPin (pin, returnedEmployeePin) {
+  try {
+    const match = await bcrypt.compare(pin, returnedEmployeePin.toString() )
+    if(!match){
+      return false
+    } else {
+      return true
+    }
+  } catch (error) {
+    res.status(500).json({
+      "message": error
+    })
+  }
+}
+async function hashPin (req) {
+  return await bcrypt.hash(req.body.pin.toString(), saltRounds)
+}
+
+module.exports = {
+  checkPin, 
+  hashPin
 }

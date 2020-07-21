@@ -1,6 +1,5 @@
 const Employee = require('../model/employee')
-const bcrypt = require('bcrypt');
-const saltRounds = 10;
+const { checkPin, hashPin} = require('../encrypt/encrypt')
 
 // GET ALL 
 async function getAllEmployees (req, res){
@@ -31,19 +30,18 @@ async function getAllEmployees (req, res){
       "message": "unauthorised access"
     })
     res.status(500).json({
-      "message": "Internal server error"
+      "message": error
     })
   }
 }
 // CREATE 
 async function createEmployee (req, res){
   try {
-    const hashed = await bcrypt.hash(req.body.pin.toString(), saltRounds)
     const newEmployee = new Employee({
       name: req.body.name,
       contactDetails: req.body.contactDetails,
       employeeID: req.body.employeeID,
-      pin: hashed,
+      pin: await hashPin(req),
       accountBalance: req.body.accountBalance,
       visits: {
         last: new Date()
@@ -54,7 +52,9 @@ async function createEmployee (req, res){
     newEmployee.save()
 
   } catch (error) {
-    console.log(error)
+    res.status(500).json({
+      "message": error
+    })
   }
 }
 
@@ -79,26 +79,40 @@ async function getEmployeeByEmployeeID(req, res){
       })
     }
   } catch (error){
-    console.log(error)
+    res.status(500).json({
+      "message": error
+    })
   }
 }
-
-
-async function checkPin (pin, returnedEmployeePin) {
-  try {
-    const match = await bcrypt.compare(pin, returnedEmployeePin.toString() )
-    if(!match){
-      return false
-    } else {
-      return true
-    }
-  } catch (error) {
-      console.log(error)
-  }
-}
-
 // UPDATE 
+async function updateEmployee (req, res){
+  try {
+    const returnedEmployee = await Employee.findOne({employeeID: req.params.employeeID})
 
+    if(returnedEmployee){
+      returnedEmployee.name.first = req.body.name.first || returnedEmployee.name.first
+      returnedEmployee.name.last = req.body.name.last || returnedEmployee.name.last
+      returnedEmployee.contactDetails.email = req.body.contactDetails.email || returnedEmployee.contactDetails.email
+      returnedEmployee.contactDetails.telephone = req.body.contactDetails.telephone || returnedEmployee.contactDetails.telephone
+      returnedEmployee.employeeID = req.body.employeeID || returnedEmployee.employeeID
+      returnedEmployee.pin = await hashPin(req) || returnedEmployee.pin
+      returnedEmployee.accountBalance = req.body.accountBalance || returnedEmployee.accountBalance
+      returnedEmployee.visits.last = req.body.visits.last || returnedEmployee.visits.last
+
+      returnedEmployee.save()
+      res.send(returnedEmployee)
+
+    } else {
+      res.status(404).json({
+        "message": "Unable to be found. Please register for an account"
+      })
+    }
+  } catch(error){
+    res.status(500).json({
+      "message": error
+    })
+  }
+}
 // DELETE
 async function deleteEmployee (req, res){
   try {
@@ -126,9 +140,11 @@ async function deleteEmployee (req, res){
     })
   }
 }
+
 module.exports = {
   getAllEmployees,
   createEmployee,
   getEmployeeByEmployeeID,
-  deleteEmployee
+  deleteEmployee,
+  updateEmployee
 }
