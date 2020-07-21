@@ -52,6 +52,8 @@ async function createEmployee (req, res){
         last: new Date(),
       }
     })
+
+    
     res.send(newEmployee)
     newEmployee.save()
 

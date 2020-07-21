@@ -11,7 +11,8 @@ const EmployeeSchema = mongoose.Schema({
       maxLength: 30,
       validate: {
         validator: validation.string
-      }
+      },
+      uppercase: true
     },
     last: {
       type: String,
@@ -21,7 +22,8 @@ const EmployeeSchema = mongoose.Schema({
       maxLength: 30,
       validate: {
         validator: validation.string
-      }
+      },
+      uppercase: true
     }
   },
   contactDetails: {
@@ -46,13 +48,12 @@ const EmployeeSchema = mongoose.Schema({
     type: String,
     required: true,
     minLength: 16,
+    unique: true
   },
   pin: {
     type: String,
     required: true,
-    validate: {
-      validator: validation.pin
-    }
+    unique: true
   },
   accountBalance: {
     type: Number,
