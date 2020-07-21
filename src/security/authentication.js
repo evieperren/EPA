@@ -4,7 +4,7 @@ const roles = {
       next()
     } else {
       res.status(401).json({
-        "message": "Restricted access. Please check your permissions"
+        "message": "Unauthorised access. Try again with correct details"
       })
     }
   },
@@ -13,7 +13,7 @@ const roles = {
       next()
     } else {
       res.status(401).json({
-        "message": "Restricted access. Please check your permissions"
+        "message": "Unauthorised access. Try again with correct details"
       })
     }
   },
@@ -22,7 +22,7 @@ const roles = {
       next()
     } else {
       res.status(401).json({
-        "message": "Restricted access. Please check your permissions"
+        "message": "Unauthorised access. Try again with correct details"
       })
     }
   },
@@ -31,25 +31,25 @@ const roles = {
       next()
     } else {
       res.status(401).json({
-        "message": "Restricted access. Please check your permissions"
+        "message": "Unauthorised access. Try again with correct details"
       })
     }
   },
-  BowsFormulaOne: () => {
+  BowsFormulaOne: (req, res, next) => {
     if(req.auth.user === 'bows-formula-one-employee' || req.auth.user === 'bows-formula-one'){
       next()
     } else {
       res.status(401).json({
-        "message": "Restricted access. Please check your permissions"
+        "message": "Unauthorised access. Try again with correct details"
       })
     }
   },
-  all: () => {
+  all: (req, res, next) => {
     if(req.auth.user === 'first-catering' || req.auth.user === 'bows-formula-one' || req.auth.user === 'bows-formula-one-employee'){
       next()
     } else {
       res.status(401).json({
-        "message": "Restricted access. Please check your permissions"
+        "message": "Unauthorised access. Try again with correct details"
       })
     }
   }

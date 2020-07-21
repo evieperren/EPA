@@ -12,17 +12,17 @@ controller.use('/', (req, res, next) => {
 controller.get('/', roles.FirstCateringLtd_BowsFormulaOne, (req, res) => {
   getAllEmployees(req, res)
 })
-controller.get('/:employeeID', roles.BowsFormulaOneEmployee, (req, res) => {
+controller.get('/:employeeID', roles.all, (req, res) => {
   getEmployeeByEmployeeID(req, res)
 })
-controller.post('/', (req, res) => {
+controller.post('/', roles.all, (req, res) => {
   createEmployee(req, res)
 })
-controller.delete('/:employeeID', (req, res) => {
-  deleteEmployee(req, res)
-})
-controller.put('/:employeeID', (req, res) => {
+controller.put('/:employeeID', roles.BowsFormulaOne, (req, res) => {
   updateEmployee(req, res)
+})
+controller.delete('/:employeeID', roles.BowsFormulaOne, (req, res) => {
+  deleteEmployee(req, res)
 })
 
 module.exports = controller
