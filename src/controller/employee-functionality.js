@@ -48,7 +48,8 @@ async function createEmployee (req, res){
       pin: await hashPin(req),
       accountBalance: req.body.accountBalance,
       visits: {
-        last: new Date()
+        current: new Date(),
+        last: new Date(),
       }
     })
     res.send(newEmployee)
@@ -68,6 +69,7 @@ async function getEmployeeByEmployeeID(req, res){
     if(returnedEmployee){
       if(req.auth.user === 'bows-formula-one-employee'){
         if(await checkPin(req.auth.password, returnedEmployee.pin)){
+          returnedEmployee.visits.last = new Date()
           res.status(200).json({
             "message": `Welcome, ${returnedEmployee.name.first}`,
             "employee": returnedEmployee
@@ -78,6 +80,8 @@ async function getEmployeeByEmployeeID(req, res){
           })
         }
       } else {
+        returnedEmployee.visits.last = new Date()
+        console.log(returnedEmployee)
         res.status(200).json({
           "message": `Welcome, ${returnedEmployee.name.first}`,
           "employee": returnedEmployee
@@ -98,9 +102,8 @@ async function getEmployeeByEmployeeID(req, res){
 async function updateEmployee (req, res){
   try {
     const returnedEmployee = await Employee.findOne({employeeID: req.params.employeeID})
-    
+    console.log(req.auth.user)
     if(returnedEmployee){
-      
       if(req.auth.user === 'bows-formula-one-employee'){
         if(await checkPin(req.auth.password, returnedEmployee.pin)){
           returnedEmployee.name.first = req.body.name.first || returnedEmployee.name.first
@@ -110,8 +113,10 @@ async function updateEmployee (req, res){
           returnedEmployee.employeeID = req.body.employeeID || returnedEmployee.employeeID
           returnedEmployee.pin = await hashPin(req) || returnedEmployee.pin
           returnedEmployee.accountBalance = req.body.accountBalance || returnedEmployee.accountBalance
-          returnedEmployee.visits.last = req.body.visits.last || returnedEmployee.visits.last
+          returnedEmployee.visits.last = returnedEmployee.visits.current
+          returnedEmployee.visits.current = new Date()
           returnedEmployee.save()
+
           res.status(200).json({
             "message": `Welcome, ${returnedEmployee.name.first}`,
             "response": returnedEmployee
@@ -129,7 +134,9 @@ async function updateEmployee (req, res){
         returnedEmployee.employeeID = req.body.employeeID || returnedEmployee.employeeID
         returnedEmployee.pin = await hashPin(req) || returnedEmployee.pin
         returnedEmployee.accountBalance = req.body.accountBalance || returnedEmployee.accountBalance
-        returnedEmployee.visits.last = req.body.visits.last || returnedEmployee.visits.last
+        returnedEmployee.visits.last = returnedEmployee.visits.current
+          returnedEmployee.visits.current =  new Date()
+          console.log(returnedEmployee.visits.last)
         
         returnedEmployee.save()
         res.status(200).json({

@@ -43,6 +43,10 @@ const EmployeeSchema = mongoose.Schema({
     required: true
   },
   visits: {
+    current: {
+      type: Date,
+      required: true
+    },
     last: {
       type: Date,
       required: true
