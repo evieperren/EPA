@@ -72,6 +72,7 @@ async function createEmployee (req, res){
 }
 
 // GET BY EMPLOYEE ID
+let counter = 0;
 async function getEmployeeByEmployeeID(req, res){
   try {
     const returnedEmployee = await Employee.findOne({employeeID: req.params.employeeID})
@@ -79,21 +80,36 @@ async function getEmployeeByEmployeeID(req, res){
       if(req.auth.user === 'bows-formula-one-employee'){
         if(await checkPin(req.auth.password, returnedEmployee.pin)){
           returnedEmployee.visits.last = new Date()
-          res.status(200).json({
-            "message": `Welcome, ${returnedEmployee.name.first}`,
-            "employee": returnedEmployee
-          })
+          counter++
+
+          if(counter >= 2){
+            res.json({
+              "message": 'Goodbye'
+            })
+          } else {
+            res.status(200).json({
+              "message": `Welcome, ${returnedEmployee.name.first}`,
+              "employee": returnedEmployee
+            })
+          }
         } else {
           res.status(401).json({
             "message": "Unauthorised access. Try again with correct details"
           })
         }
       } else {
+        counter++
         returnedEmployee.visits.last = new Date()
-        res.status(200).json({
-          "message": `Welcome, ${returnedEmployee.name.first}`,
-          "employee": returnedEmployee
-        })
+        if(counter >= 2){
+          res.json({
+            "message": 'Goodbye'
+          })
+        } else {
+          res.status(200).json({
+            "message": `Welcome, ${returnedEmployee.name.first}`,
+            "employee": returnedEmployee
+          })
+        }
       }
     } else {
       res.status(404).json({
@@ -123,18 +139,24 @@ async function updateEmployee (req, res){
           returnedEmployee.visits.last = returnedEmployee.visits.current
           returnedEmployee.visits.current = new Date()
 
-
-          const errors = await validationResult(req)
-          if(!errors.isEmpty()){
-            res.status(400).json({
-              "message": errors.array()
+          counter++
+          if(counter >= 2){
+            res.json({
+              "message": 'Goodbye'
             })
           } else {
-            returnedEmployee.save()
-            res.status(200).json({
-              "message": `Welcome, ${returnedEmployee.name.first}`,
-              "response": returnedEmployee
-            })
+            const errors = await validationResult(req)
+            if(!errors.isEmpty()){
+              res.status(400).json({
+                "message": errors.array()
+              })
+            } else {
+              returnedEmployee.save()
+              res.status(200).json({
+                "message": `Welcome, ${returnedEmployee.name.first}`,
+                "response": returnedEmployee
+              })
+            }
           }
         } else {
           res.status(401).json({
@@ -152,17 +174,24 @@ async function updateEmployee (req, res){
         returnedEmployee.visits.last = returnedEmployee.visits.current
         returnedEmployee.visits.current =  new Date()
         
-        const errors = await validationResult(req)
-        if(!errors.isEmpty()){
-          res.status(400).json({
-            "message": errors.array()
+        counter++
+        if(counter >= 2){
+          res.json({
+            "message": 'Goodbye'
           })
         } else {
-          returnedEmployee.save()
-          res.status(200).json({
-            "message": `Welcome, ${returnedEmployee.name.first}`,
-            "response": returnedEmployee
-          })
+          const errors = await validationResult(req)
+          if(!errors.isEmpty()){
+            res.status(400).json({
+              "message": errors.array()
+            })
+          } else {
+            returnedEmployee.save()
+            res.status(200).json({
+              "message": `Welcome, ${returnedEmployee.name.first}`,
+              "response": returnedEmployee
+            })
+          }
         }
     }
     } else {
