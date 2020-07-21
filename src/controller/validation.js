@@ -46,7 +46,7 @@ const validation = {
       .not().isEmpty()
   ],
   put: [
-    check('name.first')
+  check('name.first')
     .isString().withMessage('Please enter a valid first name')
     .isLength({min: 2, max: 30}).withMessage('Please enter a name between 2 and 30 characters')
     .matches(/([A-Za-z]{2,30})\w+/).withMessage('Please enter a valid first name')
@@ -79,7 +79,7 @@ const validation = {
   check('pin')
     .isNumeric().withMessage('Please enter a valid pin code of 4 digits')
     .trim()
-    .optional({checkFalsy: true}),,
+    .optional({checkFalsy: true}),
   check('accountBalance')
     .isCurrency({require_symbol: false, allow_negatives: true, negative_sign_before_digits: true, negative_sign_after_digits: true, decimal_separator: '.', allow_decimal: true, require_decimal: true, digits_after_decimal: [2]}).withMessage('Please enter a value with 2 decimal places')
     .optional({checkFalsy: true}),

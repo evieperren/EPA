@@ -19,7 +19,7 @@ controller.get('/:employeeID', roles.all, (req, res) => {
 controller.post('/', roles.all, validation.post, (req, res) => {
   createEmployee(req, res)
 })
-controller.put('/:employeeID', roles.BowsFormulaOne, (req, res) => {
+controller.put('/:employeeID', roles.BowsFormulaOne, validation.put, (req, res) => {
   updateEmployee(req, res)
 })
 controller.delete('/:employeeID', roles.BowsFormulaOne, (req, res) => {

@@ -195,7 +195,7 @@ async function deleteEmployee (req, res){
           })
         }
       } else {
-        // await Employee.findOneAndDelete({employeeID: req.params.employeeID})
+        await Employee.findOneAndDelete({employeeID: req.params.employeeID})
         res.status(200).json({
           "response": `Employee: ${returnedEmployee.employeeID} (${returnedEmployee.name.first} ${returnedEmployee.name.last}) has been successfully deleted`
         })
