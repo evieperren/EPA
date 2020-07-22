@@ -8,13 +8,15 @@ const { response } = require('express')
 describe('Delete Employee test suite', () => {
   beforeEach(() => {
     results = jest.fn()
+    jest.clearAllMocks();
+    mockingoose.resetAll();
   })
   it('should be defined', () => {
     expect(deleteEmployee).toBeDefined()
   })
   it('should find Employee by Employee ID', async () => {
     mockingoose(Employee).toReturn(request, 'findOne')
-    const results = await Employee.findById({employeeID: '0efy65d68jgt543t'})
+    const results = await Employee.findOne({employeeID: '0efy65d68jgt543t'})
 
     expect(results.employeeID).toEqual(request.employeeID)
   })

@@ -10,7 +10,9 @@ const { response } = require('express')
 
 describe('Create an Employee test suite', () => {
   beforeEach(() => {
+    jest.clearAllMocks();
     validationResult.mockClear()
+    mockingoose.resetAll();
   })
   it('should be defined', () => {
     expect(createEmployee).toBeDefined()
