@@ -1,0 +1,58 @@
+{
+  "message": [
+      {
+          "value": "",
+          "msg": "Please enter a name between 2 and 30 characters",
+          "param": "name.last",
+          "location": "body"
+      },
+      {
+          "value": "",
+          "msg": "Please enter a valid last name",
+          "param": "name.last",
+          "location": "body"
+      },
+      {
+          "value": "",
+          "msg": "Invalid value",
+          "param": "name.last",
+          "location": "body"
+      },
+      {
+          "value": "077876",
+          "msg": "Please enter a telephone number between 2 and 30 characters",
+          "param": "contactDetails.telephone",
+          "location": "body"
+      },
+      {
+          "value": "077876",
+          "msg": "Please enter a valid telephone",
+          "param": "contactDetails.telephone",
+          "location": "body"
+      },
+      {
+          "value": "evieemail.com",
+          "msg": "Please enter a valid email",
+          "param": "contactDetails.email",
+          "location": "body"
+      },
+      {
+          "value": 0,
+          "msg": "Please enter a value with 2 decimal places",
+          "param": "accountBalance",
+          "location": "body"
+      },
+      {
+          "value": "",
+          "msg": "Please enter a valid date",
+          "param": "visits.current",
+          "location": "body"
+      },
+      {
+          "value": "",
+          "msg": "Invalid value",
+          "param": "visits.current",
+          "location": "body"
+      }
+  ]
+}

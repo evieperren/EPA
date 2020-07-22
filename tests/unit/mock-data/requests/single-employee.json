@@ -1,0 +1,17 @@
+{
+  "name": {
+      "first": "EVIE",
+      "last": "EVIE"
+  },
+  "contactDetails": {
+      "telephone": "07765789876",
+      "email": "eviee@mail.com"
+  },
+  "employeeID": "0efy65d68jgt543t",
+  "pin": 2282,
+  "accountBalance": 0.99,
+  "visits": {
+    "last": "2020-07-22T09:49:54.420Z",
+    "current": "2020-07-22T09:49:54.420Z"
+  }
+}

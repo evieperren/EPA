@@ -7,7 +7,7 @@ router.use((req, res, next) => {
   next()
 })
 
-router.use('/bow-formula-one', require('../controller/employee'))
+router.use('/bows-formula-one', require('../controller/employee'))
 
 module.exports = router
 

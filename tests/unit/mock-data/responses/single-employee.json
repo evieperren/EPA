@@ -1,0 +1,18 @@
+{
+  "_id": "5f180bc2f3725818a00da5e0",
+  "name": {
+      "first": "EVIE",
+      "last": "EVIE"
+  },
+  "contactDetails": {
+      "telephone": "07765789876",
+      "email": "eviee@mail.com"
+  },
+  "employeeID": "0efy65d68jgt543t",
+  "pin": "$2b$10$lN4AscJbomuiBcL88GbHzOi1JJFg/LyLmsQO1DNSw.j8dxXd1AAPe",
+  "accountBalance": 0.99,
+  "visits": {
+    "last": "undefined",
+    "current": "undefined"
+  }
+}

@@ -60,7 +60,10 @@ async function createEmployee (req, res){
         "message": errors.array()
       })
     } else {
-      res.send(newEmployee)
+      res.status(201).json({
+        "message": "Created",
+        "response": newEmployee
+      })
       newEmployee.save()
     }
     
