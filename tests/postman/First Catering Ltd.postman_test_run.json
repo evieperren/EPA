@@ -1,0 +1,312 @@
+{
+	"id": "dec907d2-eca0-48b5-afad-d65c5760c337",
+	"name": "First Catering Ltd",
+	"timestamp": "2020-07-22T13:17:11.388Z",
+	"collection_id": "f23fc0eb-08c6-4511-911c-ed5dd5f0ca99",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 21,
+	"totalFail": 3,
+	"results": [
+		{
+			"id": "154339ac-da03-4587-9c8d-3dbe1b0a06f0",
+			"name": "Get All Employees",
+			"url": "http://localhost:4301/api/v1/bows-formula-one",
+			"time": 21,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response time is less than 200ms": true,
+				"Status code is 200": true,
+				"Check if pattern is in target string": true,
+				"Status code name has string": true
+			},
+			"testPassFailCounts": {
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check if pattern is in target string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code name has string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				21
+			],
+			"allTests": [
+				{
+					"Response time is less than 200ms": true,
+					"Status code is 200": true,
+					"Check if pattern is in target string": true,
+					"Status code name has string": true
+				}
+			]
+		},
+		{
+			"id": "0e27ffb4-b708-44ca-8d2d-83ec5740e4de",
+			"name": "Get All Employees with Low Balance",
+			"url": "http://localhost:4301/api/v1/bows-formula-one?lowBalance=true",
+			"time": 14,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response time is less than 200ms": true,
+				"Status code is 200": true,
+				"Status code name has string": true,
+				"Response shows successful return": true
+			},
+			"testPassFailCounts": {
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code name has string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response shows successful return": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				14
+			],
+			"allTests": [
+				{
+					"Response time is less than 200ms": true,
+					"Status code is 200": true,
+					"Status code name has string": true,
+					"Response shows successful return": true
+				}
+			]
+		},
+		{
+			"id": "563ea3fa-003c-4b05-b0e3-5efd31ae832d",
+			"name": "Get Employee by ID",
+			"url": "http://localhost:4301/api/v1/bows-formula-one/098yiu86ht5r8ju7",
+			"time": 42,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response time is less than 200ms": true,
+				"Status code is 200": true,
+				"Status code name has string": true,
+				"Response shows successful return": true
+			},
+			"testPassFailCounts": {
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code name has string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response shows successful return": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				42
+			],
+			"allTests": [
+				{
+					"Response time is less than 200ms": true,
+					"Status code is 200": true,
+					"Status code name has string": true,
+					"Response shows successful return": true
+				}
+			]
+		},
+		{
+			"id": "4a8cd672-b359-4f66-8bec-4641964bc788",
+			"name": "Delete Employee by ID",
+			"url": "http://localhost:4301/api/v1/bows-formula-one/r7jTG967g6789GO7L",
+			"time": 23,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": false,
+				"Status code name has string": false,
+				"Response shows successful return": false,
+				"Response time is less than 200ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Status code name has string": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response shows successful return": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				23
+			],
+			"allTests": [
+				{
+					"Status code is 200": false,
+					"Status code name has string": false,
+					"Response shows successful return": false,
+					"Response time is less than 200ms": true
+				}
+			]
+		},
+		{
+			"id": "f148dacd-80f6-4e76-9038-77d32f98585f",
+			"name": "Create Employee",
+			"url": "http://localhost:4301/api/v1/bows-formula-one",
+			"time": 101,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Response time is less than 200ms": true,
+				"Successful POST request": true,
+				"Status code name has string": true,
+				"Response shows successful return": true
+			},
+			"testPassFailCounts": {
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Successful POST request": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code name has string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response shows successful return": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				101
+			],
+			"allTests": [
+				{
+					"Response time is less than 200ms": true,
+					"Successful POST request": true,
+					"Status code name has string": true,
+					"Response shows successful return": true
+				}
+			]
+		},
+		{
+			"id": "aa605c6e-69fc-416f-bd03-1c1757fc2199",
+			"name": "Update Employee",
+			"url": "http://localhost:4301/api/v1/bows-formula-one/098yiu86ht5r8ju7",
+			"time": 79,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response time is less than 200ms": true,
+				"Status code is 200": true,
+				"Status code name has string": true,
+				"Response shows successful return": true
+			},
+			"testPassFailCounts": {
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code name has string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response shows successful return": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				79
+			],
+			"allTests": [
+				{
+					"Response time is less than 200ms": true,
+					"Status code is 200": true,
+					"Status code name has string": true,
+					"Response shows successful return": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 280,
+	"collection": {
+		"requests": [
+			{
+				"id": "154339ac-da03-4587-9c8d-3dbe1b0a06f0",
+				"method": "GET"
+			},
+			{
+				"id": "0e27ffb4-b708-44ca-8d2d-83ec5740e4de",
+				"method": "GET"
+			},
+			{
+				"id": "563ea3fa-003c-4b05-b0e3-5efd31ae832d",
+				"method": "GET"
+			},
+			{
+				"id": "4a8cd672-b359-4f66-8bec-4641964bc788",
+				"method": "DELETE"
+			},
+			{
+				"id": "f148dacd-80f6-4e76-9038-77d32f98585f",
+				"method": "POST"
+			},
+			{
+				"id": "aa605c6e-69fc-416f-bd03-1c1757fc2199",
+				"method": "PUT"
+			}
+		]
+	}
+}

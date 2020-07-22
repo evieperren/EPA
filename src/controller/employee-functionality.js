@@ -42,6 +42,7 @@ async function getAllEmployees (req, res){
 // CREATE 
 async function createEmployee (req, res){
   try {
+    console.log(res)
     const newEmployee = new Employee({
       name: req.body.name,
       contactDetails: req.body.contactDetails,
@@ -60,7 +61,10 @@ async function createEmployee (req, res){
         "message": errors.array()
       })
     } else {
-      res.send(newEmployee)
+      res.status(201).json({
+        "message": "Created",
+        "response": newEmployee
+      })
       newEmployee.save()
     }
     
@@ -195,7 +199,6 @@ async function updateEmployee (req, res){
         }
     }
     } else {
-      // this is not working 
       res.status(404).json({
         "message": "Unable to be found. Please register for an account"
       })
