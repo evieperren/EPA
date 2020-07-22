@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const validation = require('./validation')
 
 const EmployeeSchema = mongoose.Schema({
   name: {
@@ -7,14 +8,22 @@ const EmployeeSchema = mongoose.Schema({
       required: true,
       trim: true,
       minLength: 2,
-      maxLength: 30
+      maxLength: 30,
+      validate: {
+        validator: validation.string
+      },
+      uppercase: true
     },
     last: {
       type: String,
       required: true,
       trim: true,
       minLength: 2,
-      maxLength: 30
+      maxLength: 30,
+      validate: {
+        validator: validation.string
+      },
+      uppercase: true
     }
   },
   contactDetails: {
@@ -22,21 +31,29 @@ const EmployeeSchema = mongoose.Schema({
       type: String,
       required: true,
       minLength: 9,
-      maxLength: 11
+      maxLength: 11,
+      validate: {
+        validator: validation.phone
+      }
     },
     email: {
       type: String,
-      required: true
+      required: true,
+      validate: {
+        validator: validation.email
+      }
     }
   },
   employeeID: {
     type: String,
     required: true,
     minLength: 16,
+    unique: true
   },
   pin: {
     type: String,
     required: true,
+    unique: true
   },
   accountBalance: {
     type: Number,
