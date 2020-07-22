@@ -8,6 +8,12 @@ const controller = new Router()
 
 controller.use('/', (req, res, next) => {
   console.log('Reached controller')
+  setTimeout(() => {
+    // res.end()
+    res.status(408).json({
+      "message": 'timedout'
+    })
+  }, 5000)
   next()
 })
 controller.get('/', roles.FirstCateringLtd_BowsFormulaOne, (req, res) => {

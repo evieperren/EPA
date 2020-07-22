@@ -32,6 +32,12 @@ async function getAllEmployees (req, res){
       })
     } else {
       res.send(returnedEmployees)
+      setTimeout(() => {
+        res.end()
+        // res.status(408).json({
+        //   "message": 'timedout'
+        // })
+      }, 5000)
     }
   } catch (error) {
     res.status(500).json({
