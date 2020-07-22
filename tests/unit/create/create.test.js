@@ -1,12 +1,12 @@
 jest.mock('express-validator')
+jest.mock('express')
 const mockingoose = require('mockingoose').default
 const { createEmployee } = require('../../../src/controller/employee-functionality')
 const Employee = require('../../../src/model/employee')
 const responses = require('../mock-data/responses/single-employee.json')
 const request = require('../mock-data/requests/single-employee.json')
 const { validationResult } = require('express-validator')
-const validationFail = require('../mock-data/responses/validation-fail.json')
-const requestEmployeeValidationFail = require('../mock-data/requests/employee-validation-fail.json')
+const { response } = require('express')
 
 describe('Create an Employee test suite', () => {
   beforeEach(() => {
@@ -40,5 +40,9 @@ describe('Create an Employee test suite', () => {
       throw new Error
     })
     expect(validationResult).toThrow(new Error)
+  })
+  it('should send message "created" when a successful request has been made', () => {
+    response.send.mockReturnValue('Created')
+    expect(response.send()).toEqual('Created')
   })
 })

@@ -23,13 +23,12 @@ describe('Delete Employee test suite', () => {
     const results = await Employee.findByIdAndDelete({employeeID: '0efy65d68jgt543t'})
     expect(results).toBe(undefined)
   })
-  it('should send message when Employee has been successfully deleted', () => {
-    const positiveResponse = {
-      "response": "Employee: r7jTG7ghgy5wGO7L (Evie Butland) has been successfully deleted"
-    }
+  it('should send message when a successful request has been made', () => {
     response.send.mockReturnValue({
       "response": "Employee: r7jTG7ghgy5wGO7L (Evie Butland) has been successfully deleted"
     })
-    await expect(response.send).toEqual(positiveResponse)
+    expect(response.send()).toEqual({
+      "response": "Employee: r7jTG7ghgy5wGO7L (Evie Butland) has been successfully deleted"
+    })
   })
 })

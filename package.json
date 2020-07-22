@@ -19,7 +19,7 @@
     "nodemon": "^2.0.4"
   },
   "scripts": {
-    "test": "jest",
+    "test": "jest --watch",
     "start": "nodemon src/server.js"
   },
   "repository": {
