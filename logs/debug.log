@@ -33,3 +33,938 @@
   message: 'Reached controller',
   timestamp: '2020-07-23T13:05:03.036Z'
 }
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T13:20:49.251Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T13:20:49.254Z'
+}
+{
+  level: 'error',
+  message: '401: Unauthorised access. Try again with correct details',
+  timestamp: '2020-07-23T13:20:54.259Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T13:21:37.175Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T13:21:37.178Z'
+}
+{
+  level: 'error',
+  message: '401: Unauthorised access. Try again with correct details',
+  timestamp: '2020-07-23T13:21:42.180Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T13:22:49.852Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T13:22:49.856Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T13:24:24.317Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T13:24:24.320Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T13:25:02.248Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T13:25:02.252Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T13:25:29.469Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T13:25:29.472Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T13:28:41.575Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T13:28:41.579Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T13:47:55.484Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T13:47:55.488Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T13:49:13.738Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T13:49:13.739Z'
+}
+{
+  level: 'error',
+  message: '404: Unable to be found. Please register for an account',
+  timestamp: '2020-07-23T13:49:13.764Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T13:49:34.989Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T13:49:46.648Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T13:49:46.651Z'
+}
+{
+  level: 'error',
+  message: '404: Unable to be found. Please register for an account',
+  timestamp: '2020-07-23T13:49:46.662Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T13:49:53.294Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T13:49:53.294Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T13:50:00.316Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T13:50:00.316Z'
+}
+{
+  level: 'debug',
+  message: '200: Successfully sent returned employee',
+  timestamp: '2020-07-23T13:50:00.329Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T13:50:10.213Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T13:50:10.213Z'
+}
+{
+  level: 'debug',
+  message: 'Goodbye message sent',
+  timestamp: '2020-07-23T13:50:10.334Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T13:50:12.334Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T13:50:12.334Z'
+}
+{
+  level: 'debug',
+  message: 'Goodbye message sent',
+  timestamp: '2020-07-23T13:50:12.432Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T13:50:17.715Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T13:50:17.719Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T13:50:31.769Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T13:50:31.770Z'
+}
+{
+  level: 'debug',
+  message: 'Goodbye message sent',
+  timestamp: '2020-07-23T13:50:31.880Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T13:51:22.787Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T13:51:22.790Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T13:51:33.948Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T13:51:33.949Z'
+}
+{
+  level: 'error',
+  message: '401: Unauthorised access. Try again with correct details',
+  timestamp: '2020-07-23T13:51:34.050Z'
+}
+{
+  level: 'error',
+  message: '401: Unauthorised access. Try again with correct details',
+  timestamp: '2020-07-23T13:51:34.050Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T13:51:37.723Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T13:51:37.723Z'
+}
+{
+  level: 'error',
+  message: '401: Unauthorised access. Try again with correct details',
+  timestamp: '2020-07-23T13:51:37.823Z'
+}
+{
+  level: 'error',
+  message: '401: Unauthorised access. Try again with correct details',
+  timestamp: '2020-07-23T13:51:37.824Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T13:51:55.179Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T13:51:55.180Z'
+}
+{
+  level: 'debug',
+  message: '200: Successfully sent returned employee',
+  timestamp: '2020-07-23T13:51:55.190Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T13:52:00.291Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T13:52:00.291Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T13:52:18.942Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T13:52:18.942Z'
+}
+{
+  level: 'debug',
+  message: 'Goodbye message sent',
+  timestamp: '2020-07-23T13:52:18.956Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T13:52:25.622Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T13:52:25.625Z'
+}
+{
+  level: 'debug',
+  message: '200: Successfully sent returned employee',
+  timestamp: '2020-07-23T13:52:25.645Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T13:52:36.679Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T13:52:36.679Z'
+}
+{
+  level: 'debug',
+  message: '200: Successfully sent returned employee',
+  timestamp: '2020-07-23T13:52:36.695Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T13:52:40.169Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T13:52:40.169Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T13:53:30.398Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T13:53:30.398Z'
+}
+{
+  level: 'debug',
+  message: '200: Successfully sent returned employee',
+  timestamp: '2020-07-23T13:53:30.407Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T13:53:33.290Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T13:53:33.291Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T13:53:46.554Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T13:53:46.554Z'
+}
+{
+  level: 'debug',
+  message: '200: Successfully sent returned employee',
+  timestamp: '2020-07-23T13:53:46.565Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T13:53:47.571Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T13:53:47.571Z'
+}
+{
+  level: 'debug',
+  message: '200: Successfully sent returned employee',
+  timestamp: '2020-07-23T13:53:47.581Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T13:53:48.645Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T13:53:48.645Z'
+}
+{
+  level: 'debug',
+  message: '200: Successfully sent returned employee',
+  timestamp: '2020-07-23T13:53:48.656Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T13:53:49.690Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T13:53:49.690Z'
+}
+{
+  level: 'debug',
+  message: '200: Successfully sent returned employee',
+  timestamp: '2020-07-23T13:53:49.698Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T13:53:52.323Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T13:53:52.323Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T13:54:41.862Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T13:54:41.862Z'
+}
+{
+  level: 'error',
+  message: '400:[object Object]',
+  timestamp: '2020-07-23T13:54:41.949Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T13:59:02.770Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T13:59:02.773Z'
+}
+{
+  level: 'debug',
+  message: '201: Successfully created employee and sent',
+  timestamp: '2020-07-23T13:59:02.869Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T13:59:13.290Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T13:59:13.291Z'
+}
+{
+  level: 'error',
+  message: '400:[object Object]',
+  timestamp: '2020-07-23T13:59:13.424Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T14:00:28.101Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T14:00:28.106Z'
+}
+{
+  level: 'error',
+  message: '400:[object Object]',
+  timestamp: '2020-07-23T14:00:28.206Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T14:00:39.761Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T14:00:39.763Z'
+}
+{
+  level: 'error',
+  message: '400:[object Object]',
+  timestamp: '2020-07-23T14:00:39.852Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T14:00:52.942Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T14:00:52.945Z'
+}
+{
+  level: 'error',
+  message: '400:[object Object]',
+  timestamp: '2020-07-23T14:00:53.035Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T14:01:29.161Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T14:01:29.164Z'
+}
+{
+  level: 'debug',
+  message: '201: Successfully created employee and sent',
+  timestamp: '2020-07-23T14:01:29.252Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T14:01:48.547Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T14:01:48.549Z'
+}
+{
+  level: 'debug',
+  message: '201: Successfully created employee and sent',
+  timestamp: '2020-07-23T14:01:48.639Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T14:02:03.975Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T14:02:03.977Z'
+}
+{
+  level: 'debug',
+  message: '201: Successfully created employee and sent',
+  timestamp: '2020-07-23T14:02:04.080Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T14:02:52.191Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T14:02:52.194Z'
+}
+{
+  level: 'error',
+  message: '400:[object Object]',
+  timestamp: '2020-07-23T14:02:52.292Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T14:03:19.012Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T14:03:19.016Z'
+}
+{
+  level: 'debug',
+  message: '201: Successfully created employee and sent',
+  timestamp: '2020-07-23T14:03:19.126Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T14:04:41.505Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T14:04:41.508Z'
+}
+{
+  level: 'debug',
+  message: '201: Successfully created employee and sent',
+  timestamp: '2020-07-23T14:04:41.607Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T14:07:13.029Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T14:07:13.029Z'
+}
+{
+  level: 'debug',
+  message: '200: Successfully sent returned employee',
+  timestamp: '2020-07-23T14:07:13.125Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T14:28:57.470Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T14:28:57.472Z'
+}
+{
+  level: 'debug',
+  message: '200: Successfully sent returned employees',
+  timestamp: '2020-07-23T14:28:57.488Z'
+}
+{
+  level: 'error',
+  message: '500: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client',
+  timestamp: '2020-07-23T14:28:57.492Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T14:29:11.639Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T14:29:11.640Z'
+}
+{
+  level: 'debug',
+  message: '201: Successfully created employee and sent',
+  timestamp: '2020-07-23T14:29:11.743Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T14:29:13.930Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T14:29:13.931Z'
+}
+{
+  level: 'debug',
+  message: '200: Successfully sent returned employees',
+  timestamp: '2020-07-23T14:29:13.939Z'
+}
+{
+  level: 'error',
+  message: '500: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client',
+  timestamp: '2020-07-23T14:29:13.941Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T14:29:32.686Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T14:29:32.689Z'
+}
+{
+  level: 'debug',
+  message: '200: Successfully sent returned employees',
+  timestamp: '2020-07-23T14:29:32.714Z'
+}
+{
+  level: 'error',
+  message: '500: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client',
+  timestamp: '2020-07-23T14:29:32.721Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T14:31:28.694Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T14:31:28.698Z'
+}
+{
+  level: 'error',
+  message: '400:[object Object]',
+  timestamp: '2020-07-23T14:31:28.795Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T14:32:25.773Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T14:32:25.776Z'
+}
+{
+  level: 'debug',
+  message: '201: Successfully created employee and sent',
+  timestamp: '2020-07-23T14:32:25.864Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T14:34:52.110Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T14:34:52.113Z'
+}
+{
+  level: 'debug',
+  message: '201: Successfully created employee and sent',
+  timestamp: '2020-07-23T14:34:52.192Z'
+}
+{
+  level: 'error',
+  message: '500: MongoError: E11000 duplicate key error collection: first-catering.bow-formula-one-employees index: employeeID_1 dup key: { employeeID: "0ifh7ys6wu91io97" }',
+  timestamp: '2020-07-23T14:34:52.275Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T14:35:38.697Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T14:35:38.700Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T14:35:45.360Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T14:35:45.360Z'
+}
+{
+  level: 'debug',
+  message: '200: Successfully sent returned employees',
+  timestamp: '2020-07-23T14:35:45.366Z'
+}
+{
+  level: 'error',
+  message: '500: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client',
+  timestamp: '2020-07-23T14:35:45.368Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T14:36:30.254Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T14:36:30.257Z'
+}
+{
+  level: 'debug',
+  message: '200: Successfully sent returned employees',
+  timestamp: '2020-07-23T14:36:30.273Z'
+}
+{
+  level: 'error',
+  message: '500: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client',
+  timestamp: '2020-07-23T14:36:30.278Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T14:38:52.177Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T14:38:52.180Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T14:41:08.560Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T14:41:08.563Z'
+}
+{
+  level: 'debug',
+  message: '200: Successfully sent returned employees',
+  timestamp: '2020-07-23T14:41:08.579Z'
+}
+{
+  level: 'error',
+  message: '500: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client',
+  timestamp: '2020-07-23T14:41:08.591Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T14:41:24.756Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T14:41:24.757Z'
+}
+{
+  level: 'debug',
+  message: '201: Successfully created employee and sent',
+  timestamp: '2020-07-23T14:41:24.847Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T14:41:33.469Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T14:41:33.470Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T14:41:44.266Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T14:41:44.267Z'
+}
+{
+  level: 'debug',
+  message: '200: Successfully sent returned employees',
+  timestamp: '2020-07-23T14:41:44.275Z'
+}
+{
+  level: 'error',
+  message: '500: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client',
+  timestamp: '2020-07-23T14:41:44.276Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T14:42:16.963Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T14:42:16.963Z'
+}
+{
+  level: 'debug',
+  message: '200: Successfully sent returned employees',
+  timestamp: '2020-07-23T14:42:16.971Z'
+}
+{
+  level: 'error',
+  message: '500: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client',
+  timestamp: '2020-07-23T14:42:16.972Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T14:42:26.904Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T14:42:26.906Z'
+}
+{
+  level: 'debug',
+  message: '200: Successfully sent returned employees',
+  timestamp: '2020-07-23T14:42:26.921Z'
+}
+{
+  level: 'error',
+  message: '500: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client',
+  timestamp: '2020-07-23T14:42:26.926Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T14:43:18.396Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T14:43:18.398Z'
+}
+{
+  level: 'debug',
+  message: '200: Successfully sent returned employees',
+  timestamp: '2020-07-23T14:43:18.422Z'
+}
+{
+  level: 'error',
+  message: '500: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client',
+  timestamp: '2020-07-23T14:43:18.428Z'
+}
