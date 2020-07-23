@@ -643,3 +643,328 @@
   message: '201: Successfully created employee and sent',
   timestamp: '2020-07-23T14:04:41.607Z'
 }
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T14:07:13.029Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T14:07:13.029Z'
+}
+{
+  level: 'debug',
+  message: '200: Successfully sent returned employee',
+  timestamp: '2020-07-23T14:07:13.125Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T14:28:57.470Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T14:28:57.472Z'
+}
+{
+  level: 'debug',
+  message: '200: Successfully sent returned employees',
+  timestamp: '2020-07-23T14:28:57.488Z'
+}
+{
+  level: 'error',
+  message: '500: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client',
+  timestamp: '2020-07-23T14:28:57.492Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T14:29:11.639Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T14:29:11.640Z'
+}
+{
+  level: 'debug',
+  message: '201: Successfully created employee and sent',
+  timestamp: '2020-07-23T14:29:11.743Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T14:29:13.930Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T14:29:13.931Z'
+}
+{
+  level: 'debug',
+  message: '200: Successfully sent returned employees',
+  timestamp: '2020-07-23T14:29:13.939Z'
+}
+{
+  level: 'error',
+  message: '500: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client',
+  timestamp: '2020-07-23T14:29:13.941Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T14:29:32.686Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T14:29:32.689Z'
+}
+{
+  level: 'debug',
+  message: '200: Successfully sent returned employees',
+  timestamp: '2020-07-23T14:29:32.714Z'
+}
+{
+  level: 'error',
+  message: '500: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client',
+  timestamp: '2020-07-23T14:29:32.721Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T14:31:28.694Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T14:31:28.698Z'
+}
+{
+  level: 'error',
+  message: '400:[object Object]',
+  timestamp: '2020-07-23T14:31:28.795Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T14:32:25.773Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T14:32:25.776Z'
+}
+{
+  level: 'debug',
+  message: '201: Successfully created employee and sent',
+  timestamp: '2020-07-23T14:32:25.864Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T14:34:52.110Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T14:34:52.113Z'
+}
+{
+  level: 'debug',
+  message: '201: Successfully created employee and sent',
+  timestamp: '2020-07-23T14:34:52.192Z'
+}
+{
+  level: 'error',
+  message: '500: MongoError: E11000 duplicate key error collection: first-catering.bow-formula-one-employees index: employeeID_1 dup key: { employeeID: "0ifh7ys6wu91io97" }',
+  timestamp: '2020-07-23T14:34:52.275Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T14:35:38.697Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T14:35:38.700Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T14:35:45.360Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T14:35:45.360Z'
+}
+{
+  level: 'debug',
+  message: '200: Successfully sent returned employees',
+  timestamp: '2020-07-23T14:35:45.366Z'
+}
+{
+  level: 'error',
+  message: '500: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client',
+  timestamp: '2020-07-23T14:35:45.368Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T14:36:30.254Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T14:36:30.257Z'
+}
+{
+  level: 'debug',
+  message: '200: Successfully sent returned employees',
+  timestamp: '2020-07-23T14:36:30.273Z'
+}
+{
+  level: 'error',
+  message: '500: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client',
+  timestamp: '2020-07-23T14:36:30.278Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T14:38:52.177Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T14:38:52.180Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T14:41:08.560Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T14:41:08.563Z'
+}
+{
+  level: 'debug',
+  message: '200: Successfully sent returned employees',
+  timestamp: '2020-07-23T14:41:08.579Z'
+}
+{
+  level: 'error',
+  message: '500: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client',
+  timestamp: '2020-07-23T14:41:08.591Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T14:41:24.756Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T14:41:24.757Z'
+}
+{
+  level: 'debug',
+  message: '201: Successfully created employee and sent',
+  timestamp: '2020-07-23T14:41:24.847Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T14:41:33.469Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T14:41:33.470Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T14:41:44.266Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T14:41:44.267Z'
+}
+{
+  level: 'debug',
+  message: '200: Successfully sent returned employees',
+  timestamp: '2020-07-23T14:41:44.275Z'
+}
+{
+  level: 'error',
+  message: '500: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client',
+  timestamp: '2020-07-23T14:41:44.276Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T14:42:16.963Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T14:42:16.963Z'
+}
+{
+  level: 'debug',
+  message: '200: Successfully sent returned employees',
+  timestamp: '2020-07-23T14:42:16.971Z'
+}
+{
+  level: 'error',
+  message: '500: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client',
+  timestamp: '2020-07-23T14:42:16.972Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T14:42:26.904Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T14:42:26.906Z'
+}
+{
+  level: 'debug',
+  message: '200: Successfully sent returned employees',
+  timestamp: '2020-07-23T14:42:26.921Z'
+}
+{
+  level: 'error',
+  message: '500: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client',
+  timestamp: '2020-07-23T14:42:26.926Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T14:43:18.396Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T14:43:18.398Z'
+}
+{
+  level: 'debug',
+  message: '200: Successfully sent returned employees',
+  timestamp: '2020-07-23T14:43:18.422Z'
+}
+{
+  level: 'error',
+  message: '500: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client',
+  timestamp: '2020-07-23T14:43:18.428Z'
+}

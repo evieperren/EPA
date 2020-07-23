@@ -10,7 +10,7 @@ async function getAllEmployees (req, res){
   try {
     // GET ALL WITH LOW BALANCE
     if(req.query.lowBalance){
-      returnedEmployees = await Employee.find({accountBalance: {$lte: 2.00}})
+      returnedEmployees = await Employee.find({accountBalance: {$lte: 2.00}}).sort('accountBalance')
       
       if(req.auth.user === 'first-catering'){
         winston.log('error', '401: Unauthorised access. Try again with correct details')
@@ -18,17 +18,17 @@ async function getAllEmployees (req, res){
           "message": unauthorisedUsers()
         })
       } else {
-          if(returnedEmployees.length === 0){
-            winston.log('error', "404: No Employee's with balance lower than £2.00")
-            res.status(404).json({
-              "message": "No Employee's with balance lower than £2.00"
-            })
-          } else {
-            winston.log('debug', "200: Successfully sent returned employees")
-            res.status(200).json({
-              "message": returnedEmployees
-            })
-          }
+        if(returnedEmployees.length === 0){
+          winston.log('error', "404: No Employee's with balance lower than £2.00")
+          res.status(404).json({
+            "message": "No Employee's with balance lower than £2.00"
+          })
+        } else {
+          winston.log('debug', "200: Successfully sent returned employees")
+          res.status(200).json({
+            "message": returnedEmployees
+          })
+        }
       }
     } else {
       returnedEmployees = await Employee.find()
@@ -39,7 +39,9 @@ async function getAllEmployees (req, res){
         "message": "Unable to be found. Please register for an account"
       })
     } else {
-      res.send(returnedEmployees)
+      res.status(200).json({
+        "message": returnedEmployees
+      })
     }
   } catch (error) {
     winston.log('error', `500: ${error}`)

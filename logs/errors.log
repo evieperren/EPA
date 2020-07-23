@@ -68,3 +68,63 @@
   message: '400:[object Object]',
   timestamp: '2020-07-23T14:02:52.292Z'
 }
+{
+  level: 'error',
+  message: '500: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client',
+  timestamp: '2020-07-23T14:28:57.492Z'
+}
+{
+  level: 'error',
+  message: '500: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client',
+  timestamp: '2020-07-23T14:29:13.941Z'
+}
+{
+  level: 'error',
+  message: '500: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client',
+  timestamp: '2020-07-23T14:29:32.721Z'
+}
+{
+  level: 'error',
+  message: '400:[object Object]',
+  timestamp: '2020-07-23T14:31:28.795Z'
+}
+{
+  level: 'error',
+  message: '500: MongoError: E11000 duplicate key error collection: first-catering.bow-formula-one-employees index: employeeID_1 dup key: { employeeID: "0ifh7ys6wu91io97" }',
+  timestamp: '2020-07-23T14:34:52.275Z'
+}
+{
+  level: 'error',
+  message: '500: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client',
+  timestamp: '2020-07-23T14:35:45.368Z'
+}
+{
+  level: 'error',
+  message: '500: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client',
+  timestamp: '2020-07-23T14:36:30.278Z'
+}
+{
+  level: 'error',
+  message: '500: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client',
+  timestamp: '2020-07-23T14:41:08.591Z'
+}
+{
+  level: 'error',
+  message: '500: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client',
+  timestamp: '2020-07-23T14:41:44.276Z'
+}
+{
+  level: 'error',
+  message: '500: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client',
+  timestamp: '2020-07-23T14:42:16.972Z'
+}
+{
+  level: 'error',
+  message: '500: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client',
+  timestamp: '2020-07-23T14:42:26.926Z'
+}
+{
+  level: 'error',
+  message: '500: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client',
+  timestamp: '2020-07-23T14:43:18.428Z'
+}
