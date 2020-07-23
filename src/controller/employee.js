@@ -3,11 +3,12 @@ const Router = express.Router
 const { createEmployee, getAllEmployees, getEmployeeByEmployeeID, deleteEmployee, updateEmployee } = require('./employee-functionality')
 const roles = require('../security/authentication')
 const { validation }= require('./validation')
+const winston  = require('winston')
 
 const controller = new Router()
 
 controller.use('/', (req, res, next) => {
-  console.log('Reached controller')
+  winston.log('debug', 'Reached controller')
   next()
 })
 controller.get('/', roles.FirstCateringLtd_BowsFormulaOne, (req, res) => {

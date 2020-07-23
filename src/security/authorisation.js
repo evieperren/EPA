@@ -1,4 +1,5 @@
 const basicAuth = require('express-basic-auth')
+const winston = require('winston')
 
 function authoriseUsers (username, password, cb) {
   if (basicAuth.safeCompare(username, 'bows-formula-one-employee')){
@@ -15,6 +16,7 @@ function authoriseUsers (username, password, cb) {
   }
 }
 function unauthorisedUsers () {
+  winston.log('error', '401: Unauthorised access. Try again with correct details')
   return "Unauthorised access. Try again with correct details"
 }
 module.exports = {
