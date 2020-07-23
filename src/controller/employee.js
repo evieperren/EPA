@@ -9,10 +9,7 @@ const controller = new Router()
 controller.use('/', (req, res, next) => {
   console.log('Reached controller')
   setTimeout(() => {
-    // res.end()
-    res.status(408).json({
-      "message": 'timedout'
-    })
+    console.log('You have been logged out')
   }, 5000)
   next()
 })
@@ -23,7 +20,7 @@ controller.get('/:employeeID', roles.all, (req, res) => {
   getEmployeeByEmployeeID(req, res)
 })
 controller.post('/', roles.all, validation.post, (req, res) => {
-  createEmployee(req, res)
+    createEmployee(req, res)
 })
 controller.put('/:employeeID', roles.BowsFormulaOne, validation.put, (req, res) => {
   updateEmployee(req, res)

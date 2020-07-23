@@ -32,12 +32,6 @@ async function getAllEmployees (req, res){
       })
     } else {
       res.send(returnedEmployees)
-      setTimeout(() => {
-        res.end()
-        // res.status(408).json({
-        //   "message": 'timedout'
-        // })
-      }, 5000)
     }
   } catch (error) {
     res.status(500).json({
@@ -48,7 +42,6 @@ async function getAllEmployees (req, res){
 // CREATE 
 async function createEmployee (req, res){
   try {
-    console.log(res)
     const newEmployee = new Employee({
       name: req.body.name,
       contactDetails: req.body.contactDetails,
@@ -71,7 +64,7 @@ async function createEmployee (req, res){
         "message": "Created",
         "response": newEmployee
       })
-      newEmployee.save()
+      // newEmployee.save()
     }
     
   } catch (error) {
