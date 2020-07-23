@@ -1,0 +1,35 @@
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T13:03:03.887Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T13:03:29.185Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T13:04:21.404Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T13:04:21.406Z'
+}
+{
+  level: 'debug',
+  message: 'connnected to database',
+  timestamp: '2020-07-23T13:05:01.323Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T13:05:03.035Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T13:05:03.036Z'
+}
