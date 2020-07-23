@@ -12,8 +12,10 @@
     "express-basic-auth": "^1.2.0",
     "express-session": "^1.17.1",
     "express-validator": "^6.6.0",
+    "express-winston": "^4.0.5",
     "mockingoose": "^2.13.2",
-    "mongoose": "^5.9.25"
+    "mongoose": "^5.9.25",
+    "winston": "^3.3.3"
   },
   "devDependencies": {
     "jest": "^26.1.0",

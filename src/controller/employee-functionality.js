@@ -1,7 +1,9 @@
 const Employee = require('../model/employee')
 const { checkPin, hashPin } = require('../encrypt/encrypt')
 const { validationResult } = require('express-validator')
+const winston = require('winston')
 const { unauthorisedUsers } = require('../security/authorisation')
+
 // GET ALL 
 async function getAllEmployees (req, res){
   let returnedEmployees 
@@ -11,22 +13,28 @@ async function getAllEmployees (req, res){
       returnedEmployees = await Employee.find({accountBalance: {$lte: 2.00}})
       
       if(req.auth.user === 'first-catering'){
+        winston.log('error', '401: Unauthorised access. Try again with correct details')
         res.status(401).json({
           "message": unauthorisedUsers()
         })
       } else {
           if(returnedEmployees.length === 0){
+            winston.log('error', "404: No Employee's with balance lower than £2.00")
             res.status(404).json({
               "message": "No Employee's with balance lower than £2.00"
             })
           } else {
-            res.send(returnedEmployees)
+            winston.log('debug', "200: Successfully sent returned employees")
+            res.status(200).json({
+              "message": returnedEmployees
+            })
           }
       }
     } else {
       returnedEmployees = await Employee.find()
     }
     if(returnedEmployees.length === 0){
+      winston.log('error', "404: Unable to be found. Please register for an account")
       res.status(404).json({
         "message": "Unable to be found. Please register for an account"
       })
@@ -34,6 +42,7 @@ async function getAllEmployees (req, res){
       res.send(returnedEmployees)
     }
   } catch (error) {
+    winston.log('error', `500: ${error}`)
     res.status(500).json({
       "message": error
     })
@@ -57,12 +66,14 @@ async function createEmployee (req, res){
 
     const errors = await validationResult(req)
     if(!errors.isEmpty()){
+      winston.log('error', `400:${errors.array()}`)
       res.status(400).json({
         "message": errors.array()
       })
       next()
 
     } else {
+      winston.log("debug", "201: Successfully created employee and sent")
       res.status(201).json({
         "message": "Created",
         "response": newEmployee
@@ -73,6 +84,7 @@ async function createEmployee (req, res){
     }
     
   } catch (error) {
+    winston.log('error', `500: ${error}`)
     res.status(500).json({
       "message": error
     })
@@ -91,16 +103,19 @@ async function getEmployeeByEmployeeID(req, res){
           counter++
 
           if(counter >= 2){
+            winston.log('debug',"Goodbye message sent")
             res.status(401).json({
               "message": 'Goodbye'
             })
           } else {
+            winston.log('debug', "200: Successfully sent returned employee")
             res.status(200).json({
               "message": `Welcome, ${returnedEmployee.name.first}`,
               "employee": returnedEmployee
             })
           }
         } else {
+          winston.log('error', '401: Unauthorised access. Try again with correct details')
           res.status(401).json({
             "message": unauthorisedUsers()
           })
@@ -109,10 +124,12 @@ async function getEmployeeByEmployeeID(req, res){
         counter++
         returnedEmployee.visits.last = new Date()
         if(counter >= 2){
+            winston.log('debug',"Goodbye message sent")
           res.status(401).json({
             "message": 'Goodbye'
           })
         } else {
+          winston.log('debug',"200: Successfully sent returned employee")
           res.status(200).json({
             "message": `Welcome, ${returnedEmployee.name.first}`,
             "employee": returnedEmployee
@@ -120,11 +137,13 @@ async function getEmployeeByEmployeeID(req, res){
         }
       }
     } else {
+      winston.log('error', "404: Unable to be found. Please register for an account")
       res.status(404).json({
         "message": "Unable to be found. Please register for an account"
       })
     }
   } catch (error){
+    winston.log('error', `500: ${error}`)
     res.status(500).json({
       "message": error
     })
@@ -149,17 +168,20 @@ async function updateEmployee (req, res){
 
           counter++
           if(counter >= 2){
+            winston.log('debug', "Goodbye message sent")
             res.json({
               "message": 'Goodbye'
             })
           } else {
             const errors = await validationResult(req)
             if(!errors.isEmpty()){
+              winston.log('error', `400: ${errors.array()}`)
               res.status(400).json({
                 "message": errors.array()
               })
             } else {
               returnedEmployee.save()
+              winston.log('debug', "200: Successfully sent returned employee")
               res.status(200).json({
                 "message": `Welcome, ${returnedEmployee.name.first}`,
                 "response": returnedEmployee
@@ -167,6 +189,7 @@ async function updateEmployee (req, res){
             }
           }
         } else {
+          winston.log('error', '401: Unauthorised access. Try again with correct details')
           res.status(401).json({
             "message": unauthorisedUsers()
           })
@@ -184,6 +207,7 @@ async function updateEmployee (req, res){
         
         counter++
         if(counter >= 2){
+          winston.log('debug', "Goodbye message sent")
           res.json({
             "message": 'Goodbye'
           })
@@ -195,6 +219,7 @@ async function updateEmployee (req, res){
             })
           } else {
             returnedEmployee.save()
+            winston.log('debug', "200: Successfully sent returned employee")
             res.status(200).json({
               "message": `Welcome, ${returnedEmployee.name.first}`,
               "response": returnedEmployee
@@ -203,11 +228,13 @@ async function updateEmployee (req, res){
         }
     }
     } else {
+      winston.log('error', "404: Unable to be found. Please register for an account")
       res.status(404).json({
         "message": "Unable to be found. Please register for an account"
       })
     }
   } catch(error){
+    winston.log('error', `500: ${error}`)
     res.status(500).json({
       "message": error
     })
@@ -222,26 +249,31 @@ async function deleteEmployee (req, res){
       if(req.auth.user === 'bows-formula-one-employee'){
         if(await checkPin(req.auth.password, returnedEmployee.pin)){
           await Employee.findOneAndDelete({employeeID: req.params.employeeID})
+          winston.log('debug', "200: Successfully sent returned employee")
           res.status(200).json({
             "response": `Employee: ${returnedEmployee.employeeID} (${returnedEmployee.name.first} ${returnedEmployee.name.last}) has been successfully deleted`
           })
         } else {
+          winston.log('error', '401: Unauthorised access. Try again with correct details')
           res.status(401).json({
             "message": unauthorisedUsers()
           })
         }
       } else {
         await Employee.findOneAndDelete({employeeID: req.params.employeeID})
+        winston.log('debug', "200: Successfully sent returned employee")
         res.status(200).json({
           "response": `Employee: ${returnedEmployee.employeeID} (${returnedEmployee.name.first} ${returnedEmployee.name.last}) has been successfully deleted`
         })
       }
     } else {
+      winston.log('error', "404: Unable to be found. Please register for an account")
       res.status(404).json({
         "message": "Unable to be found. Please register for an account"
       })
     }
   } catch (error){
+    winston.log('error', `500: ${error}`)
     res.status(500).json({
       "message": error
     })

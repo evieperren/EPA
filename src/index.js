@@ -4,6 +4,9 @@ const cors = require('cors')
 const basicAuth = require('express-basic-auth')
 const session = require('express-session');
 const { authoriseUsers, unauthorisedUsers } = require('./security/authorisation')
+const winston = require('winston')
+const format = winston.format
+const { combine, timestamp, prettyPrint } = format;
 
 const app = express()
 
@@ -17,5 +20,22 @@ app.use(basicAuth({
   unauthorizedResponse: unauthorisedUsers,
   challenge: true
 }))
+
+winston.configure({
+  transports: [
+    new winston.transports.File({ 
+      level: 'error', 
+      filename: './logs/errors.log' 
+    }), 
+    new winston.transports.File({ 
+      level: 'debug',
+      filename: './logs/debug.log',
+    })
+  ],
+  format: combine(
+    timestamp(),
+    prettyPrint()
+  )
+});
 
 module.exports = app

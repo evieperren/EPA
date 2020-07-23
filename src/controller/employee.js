@@ -4,9 +4,12 @@ const { createEmployee, getAllEmployees, getEmployeeByEmployeeID, deleteEmployee
 const roles = require('../security/authentication')
 const { validation }= require('./validation')
 const { unauthorisedUsers } = require('../security/authorisation')
+const winston  = require('winston')
+
 const controller = new Router()
 
 controller.use('/', (req, res, next) => {
+  winston.log('debug', 'Reached controller')
   console.log('Reached controller')
   // req.session.cookie.expires = new Date(Date.now() + 15000)
   
