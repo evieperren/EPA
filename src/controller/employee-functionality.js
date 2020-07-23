@@ -70,7 +70,6 @@ async function createEmployee (req, res){
       res.status(400).json({
         "message": errors.array()
       })
-      next()
 
     } else {
       winston.log("debug", "201: Successfully created employee and sent")
@@ -78,9 +77,7 @@ async function createEmployee (req, res){
         "message": "Created",
         "response": newEmployee
       })
-
-      next()
-      // newEmployee.save()
+      newEmployee.save()
     }
     
   } catch (error) {

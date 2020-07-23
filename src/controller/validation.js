@@ -36,7 +36,7 @@ const validation = {
       .trim()
       .not().isEmpty(),
     check('accountBalance')
-      .isCurrency({require_symbol: false, allow_negatives: true, negative_sign_before_digits: true, negative_sign_after_digits: true, decimal_separator: '.', allow_decimal: true, require_decimal: true, digits_after_decimal: [2]}).withMessage('Please enter a value with 2 decimal places')
+      .isCurrency({require_symbol: false, allow_negatives: true, negative_sign_before_digits: true, negative_sign_after_digits: true, decimal_separator: '.', allow_decimal: true, digits_after_decimal: [2]}).withMessage('Please enter a value with 2 decimal places')
       .not().isEmpty(),
     check('visits.current')
       .isISO8601().withMessage('Please enter a valid date')
@@ -81,7 +81,7 @@ const validation = {
       .trim()
       .optional({checkFalsy: true}),
     check('accountBalance')
-      .isCurrency({require_symbol: false, allow_negatives: true, negative_sign_before_digits: true, negative_sign_after_digits: true, decimal_separator: '.', allow_decimal: true, require_decimal: true, digits_after_decimal: [2]}).withMessage('Please enter a value with 2 decimal places')
+      .isCurrency({require_symbol: false, allow_negatives: true, negative_sign_before_digits: true, negative_sign_after_digits: true, decimal_separator: '.', allow_decimal: true, digits_after_decimal: [2]}).withMessage('Please enter a value with 2 decimal places')
       .optional({checkFalsy: true}),
     check('visits.current')
       .isISO8601().withMessage('Please enter a valid date')

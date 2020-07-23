@@ -7,11 +7,11 @@ mongoose.connect('mongodb://localhost:4300/first-catering', {useNewUrlParser: tr
   console.log('Successfully connected to database')
   const setup = server.listen(4301, () => console.log(`Listerning on port: 4301`))
   app.use('/api/v1', require('./router/router'))
+  
   setTimeout(() => {
-    console.log('session has ended')
+    console.log('Session has ended')
     setup.close()
   }, 180000)
-
 })
 .catch((error) => {
   console.log(`The error is ${error} `)

@@ -11,13 +11,6 @@ const controller = new Router()
 controller.use('/', (req, res, next) => {
   winston.log('debug', 'Reached controller')
   console.log('Reached controller')
-  // req.session.cookie.expires = new Date(Date.now() + 15000)
-  
-  // setTimeout(() => {
-  //   req.session = null
-  //   console.log('logged out')
-  //   return unauthorisedUsers()
-  // }, 5000)
   next()
 })
 
