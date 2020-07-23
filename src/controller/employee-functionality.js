@@ -1,7 +1,7 @@
 const Employee = require('../model/employee')
 const { checkPin, hashPin } = require('../encrypt/encrypt')
 const { validationResult } = require('express-validator')
-
+const { unauthorisedUsers } = require('../security/authorisation')
 // GET ALL 
 async function getAllEmployees (req, res){
   let returnedEmployees 
@@ -12,7 +12,7 @@ async function getAllEmployees (req, res){
       
       if(req.auth.user === 'first-catering'){
         res.status(401).json({
-          "message": "Unauthorised access. Try again with correct details"
+          "message": unauthorisedUsers()
         })
       } else {
           if(returnedEmployees.length === 0){
@@ -40,7 +40,8 @@ async function getAllEmployees (req, res){
   }
 }
 // CREATE 
-async function createEmployee (req, res){
+
+async function createEmployee (req, res){ 
   try {
     const newEmployee = new Employee({
       name: req.body.name,
@@ -59,11 +60,15 @@ async function createEmployee (req, res){
       res.status(400).json({
         "message": errors.array()
       })
+      next()
+
     } else {
       res.status(201).json({
         "message": "Created",
         "response": newEmployee
       })
+
+      next()
       // newEmployee.save()
     }
     
@@ -86,7 +91,7 @@ async function getEmployeeByEmployeeID(req, res){
           counter++
 
           if(counter >= 2){
-            res.json({
+            res.status(401).json({
               "message": 'Goodbye'
             })
           } else {
@@ -97,14 +102,14 @@ async function getEmployeeByEmployeeID(req, res){
           }
         } else {
           res.status(401).json({
-            "message": "Unauthorised access. Try again with correct details"
+            "message": unauthorisedUsers()
           })
         }
       } else {
         counter++
         returnedEmployee.visits.last = new Date()
         if(counter >= 2){
-          res.json({
+          res.status(401).json({
             "message": 'Goodbye'
           })
         } else {
@@ -163,7 +168,7 @@ async function updateEmployee (req, res){
           }
         } else {
           res.status(401).json({
-            "message": "Unauthorised access. Try again with correct details"
+            "message": unauthorisedUsers()
           })
         }
       } else {  
@@ -222,7 +227,7 @@ async function deleteEmployee (req, res){
           })
         } else {
           res.status(401).json({
-            "message": "Unauthorised access. Try again with correct details"
+            "message": unauthorisedUsers()
           })
         }
       } else {

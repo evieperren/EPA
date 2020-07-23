@@ -1,10 +1,12 @@
+const { unauthorisedUsers } = require('../security/authorisation')
+
 const roles = {
   FirstCateringLtd: (req, res, next) => {
     if(req.auth.user === 'first-catering'){
       next()
     } else {
       res.status(401).json({
-        "message": "Unauthorised access. Try again with correct details"
+        "message": unauthorisedUsers()
       })
     }
   },
@@ -13,7 +15,7 @@ const roles = {
       next()
     } else {
       res.status(401).json({
-        "message": "Unauthorised access. Try again with correct details"
+        "message": unauthorisedUsers()
       })
     }
   },
@@ -22,7 +24,7 @@ const roles = {
       next()
     } else {
       res.status(401).json({
-        "message": "Unauthorised access. Try again with correct details"
+        "message": unauthorisedUsers()
       })
     }
   },
@@ -31,7 +33,7 @@ const roles = {
       next()
     } else {
       res.status(401).json({
-        "message": "Unauthorised access. Try again with correct details"
+        "message": unauthorisedUsers()
       })
     }
   },
@@ -40,7 +42,7 @@ const roles = {
       next()
     } else {
       res.status(401).json({
-        "message": "Unauthorised access. Try again with correct details"
+        "message": unauthorisedUsers()
       })
     }
   },
@@ -49,7 +51,7 @@ const roles = {
       next()
     } else {
       res.status(401).json({
-        "message": "Unauthorised access. Try again with correct details"
+        "message": unauthorisedUsers()
       })
     }
   }
