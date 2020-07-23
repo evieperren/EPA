@@ -13,10 +13,11 @@ controller.use('/', (req, res, next) => {
   console.log('Reached controller')
   // req.session.cookie.expires = new Date(Date.now() + 15000)
   
-  setTimeout(() => {
-    req.session = null
-    return unauthorisedUsers()
-  }, 5000)
+  // setTimeout(() => {
+  //   req.session = null
+  //   console.log('logged out')
+  //   return unauthorisedUsers()
+  // }, 5000)
   next()
 })
 

@@ -33,3 +33,83 @@
   message: 'Reached controller',
   timestamp: '2020-07-23T13:05:03.036Z'
 }
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T13:20:49.251Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T13:20:49.254Z'
+}
+{
+  level: 'error',
+  message: '401: Unauthorised access. Try again with correct details',
+  timestamp: '2020-07-23T13:20:54.259Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T13:21:37.175Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T13:21:37.178Z'
+}
+{
+  level: 'error',
+  message: '401: Unauthorised access. Try again with correct details',
+  timestamp: '2020-07-23T13:21:42.180Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T13:22:49.852Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T13:22:49.856Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T13:24:24.317Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T13:24:24.320Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T13:25:02.248Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T13:25:02.252Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T13:25:29.469Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T13:25:29.472Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-23T13:28:41.575Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-23T13:28:41.579Z'
+}
