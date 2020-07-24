@@ -1,0 +1,77 @@
+[
+  {
+      "name": {
+          "first": "New",
+          "last": "Evie"
+      },
+      "contactDetails": {
+          "telephone": "0123456789",
+          "email": "evie@email.com"
+      },
+      "visits": {
+          "last": "2020-07-21T13:28:55.877Z"
+      },
+      "_id": "5f16ed9767084855ee70a33e",
+      "employeeID": "r7jTG9677689GO7L",
+      "pin": "$2b$10$wIe6l1FENPWMj/ABOutBq.wsxtSE/hgUesRQgQdCoklGqJtHVmr.e",
+      "accountBalance": 0.99,
+      "__v": 0
+  },
+  {
+      "name": {
+          "first": "random",
+          "last": "Random"
+      },
+      "contactDetails": {
+          "telephone": "0123456789",
+          "email": "evie@email.com"
+      },
+      "visits": {
+          "current": "2020-07-21T14:52:27.542Z",
+          "last": "2020-07-21T14:51:57.235Z"
+      },
+      "_id": "5f17010d76ae1d5e751686dc",
+      "employeeID": "2",
+      "pin": "$2b$10$qkOvIZzbmVj5FY8JaGfWDecodGYDF/N.OOBjYgydBjL6kVdlcRYia",
+      "accountBalance": 0.99,
+      "__v": 0
+  },
+  {
+      "name": {
+          "first": "random",
+          "last": "Random"
+      },
+      "contactDetails": {
+          "telephone": "0123456789",
+          "email": "evie@email.com"
+      },
+      "visits": {
+          "current": "2020-07-21T14:56:57.565Z",
+          "last": "2020-07-21T14:56:39.546Z"
+      },
+      "_id": "5f170227c8d7245ead1f28a8",
+      "employeeID": "7hj9087uvjbkn",
+      "pin": "$2b$10$f4uGBYGZTxGGsW5bjPh.ueztpWZjk8BIT3EZdkLSvdoaF/HcBc53y",
+      "accountBalance": 0.99,
+      "__v": 0
+  },
+  {
+      "name": {
+          "first": "NEW",
+          "last": "EVIE"
+      },
+      "contactDetails": {
+          "telephone": "0123456789",
+          "email": "evie@email.com"
+      },
+      "visits": {
+          "current": "2020-07-21T15:38:46.024Z",
+          "last": "2020-07-21T15:38:46.024Z"
+      },
+      "_id": "5f170c06b1ef056ae2e7145c",
+      "employeeID": "7hj9087uvjbkn",
+      "pin": "$2b$10$9Dw886FKFME.L9CMqlcScOGiDTsRpjLMykOqvrb7nK2kvDYe/Pnce",
+      "accountBalance": 0.99,
+      "__v": 0
+  }
+]

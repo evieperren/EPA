@@ -1,0 +1,17 @@
+{
+  "name": {
+      "first": "EVIE",
+      "last": ""
+  },
+  "contactDetails": {
+      "telephone": "077876",
+      "email": "evieemail.com"
+  },
+  "employeeID": "0efy65d68jgt543t",
+  "pin": 2282,
+  "accountBalance": 0,
+  "visits": {
+      "current": "",
+      "last": "2002-12-09"
+  }
+}

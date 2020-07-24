@@ -1,0 +1,371 @@
+openapi: 3.0.1
+info:
+  version: 0.0.1
+  title: First Catering Ltd API
+  
+servers:
+  - url: http://localhost:6000/api/v1
+
+tags:
+  - name: Bows Formula One High Performance Cars
+    description: Catering Service
+
+paths:
+  /bows_formula_one:
+    get:
+      tags:
+        - Bows Formula One High Performance Cars
+      summary: Get all employees
+      description: Retrieves all employees
+      parameters:
+        - name: lowBalance
+          in: query
+          required: true
+          description: Filter employee by low balance
+          schema:
+            type: string
+      operationId: getEmployees
+      responses:
+        200:
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                type: "array"
+                items:
+                  $ref: '#/components/responses/200'
+        401: 
+          description: "Authorisation failed"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/401'
+        404:
+          description: "Employees not found"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/404'
+        500:
+          description: "Unexpected Error"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/500'
+          
+    post:
+      tags:
+      - Bows Formula One High Performance Cars
+      summary: "Create a Employee"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/employee'
+      responses:
+        201:
+          description: "Created"
+          content:
+            application/json:
+              schema:
+                  $ref: '#/components/responses/201'
+        401: 
+          description: "Authorisation failed"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/401'
+        400:
+          description: "Bad request"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/400'
+        500:
+          description: "Unexpected Error"
+
+  /bows_formula_one/{employeeID}: 
+    get:
+      tags:
+        - Bows Formula One High Performance Cars
+      summary: Get an employee
+      description: Retrieves an employee
+      parameters:
+        - name: employeeID
+          in: path
+          required: true
+          description: Filter employee by employee ID
+          schema:
+            type: string
+      operationId: getAnEmployee
+      responses:
+        200:
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/200'
+        401: 
+          description: "Authorisation failed"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/401'
+        404:
+          description: "Employees not found"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/404'
+        500:
+          description: "Unexpected Error"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/500'
+    delete:
+      tags:
+        - Bows Formula One High Performance Cars
+      summary: Delete one Employee
+      description: Deletes an Employee
+      parameters:
+        - name: employeeID
+          in: path
+          required: true
+          description: Filter employee by employee ID
+          schema:
+            type: string
+      responses:
+        200:
+          description: "EmployeeID has been successfully deleted"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/deleted'
+        401: 
+          description: "Authorisation failed"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/401'
+        404:
+          description: "Unable to find Employee"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/404'
+        500:
+          description: "Unexpected Error"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/500'
+
+    put:
+      tags:
+        - Bows Formula One High Performance Cars
+      summary: Update an Employee
+      description: Update an Employee; this includes partial and full updates.
+      operationId: updateEmployee
+      parameters:
+        - name: employeeID
+          in: path
+          required: true
+          description: Filter Employee by Employee ID
+          schema:
+            type: string
+      requestBody:
+        description: Update Employee body
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/employee'
+      responses:
+        200:
+          description: Employee succesfully updated
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/responses/200"
+        400:
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/responses/400"
+        401: 
+          description: "Authorisation failed"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/401'
+        404:
+          description: Unable to find Employee
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/responses/404"
+        500:
+          description: "Unexpected Error"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/responses/500'
+  
+components:
+  schemas:
+    employee:  
+      type: "object"
+      properties:
+        name:
+          type: "object"
+          properties:
+            first: 
+              type: "string"
+              example: "evie"
+            last: 
+              type: "string"
+              example: "perren"
+        contactDetails:
+          type: "object"
+          properties: 
+            telephone: 
+              type: "number"
+              example: "07712345678"
+            email: 
+              type: "string"
+              format: "email"
+              example: "evie@email.com"
+        employeeID: 
+          type: "string"
+          example: "r7jTG7dqBy5wGO4L"
+        pin: 
+          type: "string"
+          format: "password"
+          example: "$2b$10$rMD28G3SwZ8HJ3WilVxieutOyXGOJKRPzTMmjLIOEq8To6cBoqb8a"
+        accountBalance: 
+          type: "number"
+          example: "6.50"
+        visits: 
+          type: "object"
+          properties:
+            last: 
+              type: "string"
+              format: "date-time"
+
+      required:
+        - employeeID
+        - name
+        - contactDetails
+        - pin
+        - accountBalance
+        - visits
+              
+    successfulEmployee:  
+      type: "object"
+      properties:
+        _id: 
+          type: "string"
+          example: "56v78ivc865798"
+        name:
+          type: "object"
+          properties:
+            first: 
+              type: "string"
+              example: "evie"
+            last: 
+              type: "string"
+              example: "perren"
+        contactDetails:
+          type: "object"
+          properties: 
+            telephone: 
+              type: "number"
+              example: "07712345678"
+            email: 
+              type: "string"
+              format: "email"
+              example: "evie@email.com"
+        employeeID: 
+          type: "string"
+          example: "r7jTG7dqBy5wGO4L"
+        pin: 
+          type: "string"
+          format: "password"
+          example: "$2b$10$rMD28G3SwZ8HJ3WilVxieutOyXGOJKRPzTMmjLIOEq8To6cBoqb8a"
+        accountBalance: 
+          type: "number"
+          example: "6.50"
+        visits: 
+          type: "object"
+          properties:
+            last: 
+              type: "string"
+              format: "date-time"
+
+      required:
+        - employeeID
+        - name
+        - contactDetails
+        - pin
+        - accountBalance
+        - visits
+        
+  standardResponse:
+    type: "object"
+    properties:
+      message:
+        example: "Error message ..."
+  lowBalanceResponse: 
+    type: "object"
+    properties:
+      message:
+        example: "No Employee's with balance lower than £2.00"
+  deleted: 
+    type: "object"
+    properties:
+      message:
+        example: "*employeeID* has been successfully deleted"
+  notFound: 
+    type: "object"
+    properties:
+      error:
+        example: "Unable to be found. Please register for an account"
+  authorisationFailed: 
+    type: "object"
+    properties:
+      error:
+        example: "Unauthorised access. Try again with correct details"
+  
+  responses: 
+    200: 
+      $ref: "#/components/schemas/successfulEmployee"
+    201:
+      $ref: "#/components/schemas/employee"
+    400: 
+      $ref: "#/components/standardResponse"
+    401: 
+      $ref: "#/components/authorisationFailed"
+    404: 
+      $ref: "#/components/notFound"
+    500:  
+      $ref: "#/components/standardResponse"
+      
+parameters:
+  employeeID:
+    name: employeeID
+    in: path
+    description: Employee ID
+    required: true
+    schema:
+      type: string
+  lowBalance:
+    name: lowBalance
+    in: query
+    description: Employees with low balance
+    required: true
+    schema:
+      type: boolean
+    
