@@ -20,7 +20,7 @@ The API is set up to run on `localhost:4301`. In order to set up this port,
 
 Run `npm start` after `npm install` (if you have newly downloaded the project)
 
-If this has been successful you will recieve two messages in the command line 'Successfully connected to database' followed by 
+If this has been successful you will receive two messages in the command line 'Successfully connected to database' followed by 
 'Listening on port: 4301'. You are now set up to make calls to the database. 
 
 ## To stop the database container
@@ -35,10 +35,10 @@ Alternatively, stop the container named _chihuahauBox_db_ from Kitematic.
 
 NOTE: This will cause errors when trying to call API when connection has been stopped.
 
-In order to stop the API's from running, close the terminal that you first used to start it. You will see it has ended as you will no longer recieve outputs from nodemon. You are able to shut down the command by pressing `ctrl c`
+In order to stop the API's from running, close the terminal that you first used to start it. You will see it has ended as you will no longer receive outputs from nodemon. You are able to shut down the command by pressing `ctrl c`
 
 ## To run tests
 
 Run `npm test`
 
-This command will kick off Jest testing, the output from the tests will be displayed in the same terminal as the inital command was run. 
+This command will kick off Jest testing, the output from the tests will be displayed in the same terminal as the initial command was run. 
