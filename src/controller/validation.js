@@ -1,4 +1,6 @@
 const { check } = require("express-validator")
+const { validationResult } = require('express-validator')
+const winston = require('winston')
 
 const validation = {
   post: [
@@ -89,7 +91,25 @@ const validation = {
     check('visits.last')
       .isISO8601().withMessage('Please enter a valid date')
       .not().isEmpty()
-  ]
+  ],
+  check: async (req, res, employee) => {
+      const errors = await validationResult(req)
+      if(!errors.isEmpty()){
+        winston.log('error', `400:${errors.array()}`)
+        res.status(400).json({
+          "message": errors.array()
+        })
+        return false
+    
+      } else {
+        winston.log("debug", "201: Successfully created employee and sent")
+        res.status(201).json({
+          "message": "Created",
+          "response": employee
+        })
+        return true
+      }
+    }
 }
 
 module.exports = { validation }

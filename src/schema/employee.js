@@ -53,7 +53,6 @@ const EmployeeSchema = mongoose.Schema({
   pin: {
     type: String,
     required: true,
-    unique: true
   },
   accountBalance: {
     type: Number,

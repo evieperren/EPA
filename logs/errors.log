@@ -128,3 +128,138 @@
   message: '500: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client',
   timestamp: '2020-07-23T14:43:18.428Z'
 }
+{
+  level: 'error',
+  message: '401: Unauthorised access. Try again with correct details',
+  timestamp: '2020-07-24T08:47:55.230Z'
+}
+{
+  level: 'error',
+  message: '401: Unauthorised access. Try again with correct details',
+  timestamp: '2020-07-24T08:48:59.773Z'
+}
+{
+  level: 'error',
+  message: '401: Unauthorised access. Try again with correct details',
+  timestamp: '2020-07-24T08:48:59.773Z'
+}
+{
+  level: 'error',
+  message: '401: Unauthorised access. Try again with correct details',
+  timestamp: '2020-07-24T08:49:27.884Z'
+}
+{
+  level: 'error',
+  message: '401: Unauthorised access. Try again with correct details',
+  timestamp: '2020-07-24T08:49:27.884Z'
+}
+{
+  level: 'error',
+  message: "500: TypeError: Cannot read property 'length' of undefined",
+  timestamp: '2020-07-24T08:59:58.895Z'
+}
+{
+  level: 'error',
+  message: '401: Unauthorised access. Try again with correct details',
+  timestamp: '2020-07-24T09:01:27.322Z'
+}
+{
+  level: 'error',
+  message: '401: Unauthorised access. Try again with correct details',
+  timestamp: '2020-07-24T09:01:27.322Z'
+}
+{
+  level: 'error',
+  message: '500: TypeError: validation.check is not a function',
+  timestamp: '2020-07-24T09:05:37.174Z'
+}
+{
+  level: 'error',
+  message: '500: TypeError: validation.check is not a function',
+  timestamp: '2020-07-24T09:06:01.943Z'
+}
+{
+  level: 'error',
+  message: '500: TypeError: validation.check is not a function',
+  timestamp: '2020-07-24T09:07:47.818Z'
+}
+{
+  level: 'error',
+  message: '400:[object Object],[object Object]',
+  timestamp: '2020-07-24T09:11:29.690Z'
+}
+{
+  level: 'error',
+  message: '404: Unable to be found. Please register for an account',
+  timestamp: '2020-07-24T09:15:00.189Z'
+}
+{
+  level: 'error',
+  message: '404: Unable to be found. Please register for an account',
+  timestamp: '2020-07-24T09:15:23.811Z'
+}
+{
+  level: 'error',
+  message: '400:[object Object],[object Object]',
+  timestamp: '2020-07-24T09:15:45.303Z'
+}
+{
+  level: 'error',
+  message: '500: ReferenceError: res is not defined',
+  timestamp: '2020-07-24T09:22:32.808Z'
+}
+{
+  level: 'error',
+  message: '500: ReferenceError: res is not defined',
+  timestamp: '2020-07-24T09:23:03.357Z'
+}
+{
+  level: 'error',
+  message: '500: ReferenceError: res is not defined',
+  timestamp: '2020-07-24T09:23:25.910Z'
+}
+{
+  level: 'error',
+  message: '500: ReferenceError: res is not defined',
+  timestamp: '2020-07-24T09:24:43.172Z'
+}
+{
+  level: 'error',
+  message: '500: ReferenceError: res is not defined',
+  timestamp: '2020-07-24T09:25:16.095Z'
+}
+{
+  level: 'error',
+  message: '500: ReferenceError: res is not defined',
+  timestamp: '2020-07-24T09:25:52.114Z'
+}
+{
+  level: 'error',
+  message: '404: Unable to be found. Please register for an account',
+  timestamp: '2020-07-24T09:31:14.893Z'
+}
+{
+  level: 'error',
+  message: '401: Unauthorised access. Try again with correct details',
+  timestamp: '2020-07-24T09:31:50.076Z'
+}
+{
+  level: 'error',
+  message: '401: Unauthorised access. Try again with correct details',
+  timestamp: '2020-07-24T09:31:50.076Z'
+}
+{
+  level: 'error',
+  message: '404: Unable to be found. Please register for an account',
+  timestamp: '2020-07-24T09:36:43.053Z'
+}
+{
+  level: 'error',
+  message: '404: Unable to be found. Please register for an account',
+  timestamp: '2020-07-24T09:37:22.051Z'
+}
+{
+  level: 'error',
+  message: '500: ReferenceError: counter is not defined',
+  timestamp: '2020-07-24T09:42:34.026Z'
+}

@@ -3,7 +3,6 @@ const Router = express.Router
 const { createEmployee, getAllEmployees, getEmployeeByEmployeeID, deleteEmployee, updateEmployee } = require('./employee-functionality')
 const roles = require('../security/authentication')
 const { validation }= require('./validation')
-const { unauthorisedUsers } = require('../security/authorisation')
 const winston  = require('winston')
 
 const controller = new Router()
