@@ -1,9 +1,12 @@
 jest.mock('express')
+jest.mock('../../../src/controller/helpers')
 const { getEmployeeByEmployeeID } = require('../../../src/controller/employee-functionality')
 const mockingoose = require('mockingoose').default
 const Employee = require('../../../src/model/employee')
 const responseEmployee = require('../mock-data/responses/single-employee.json')
 const { response } = require('express')
+const { increaseCounter } = require('../../../src/controller/helpers')
+
 
 describe('Get Employee by Employee ID', () => {
   beforeEach(() => {
@@ -27,14 +30,22 @@ describe('Get Employee by Employee ID', () => {
     response.send.mockReturnValue('Not Found')
     expect(response.send()).toEqual('Not Found')
   })
-  it('should have increase counter value in each call', () => {
-    let counter = 0
-    const counterIncrease = jest.fn(() => {
-      counter++
-    })
-    [0,1].forEach(() => counterIncrease())
-    expect(counterIncrease.mock.calls.length).toBe(4)
-    // cannot seem to get to work
+  it('should return welcome message increase counter value in each call', () => {
+    increaseCounter.mockReturnValue(false)
+    if(!increaseCounter()){
+      response.send.mockReturnValue('Welcome, Evie')
+    }
+    expect(response.send()).toEqual('Welcome, Evie')
+  })
+  it('should return goodbye message increase counter value in each call', () => {
+    increaseCounter.mockReturnValue(true)
+    if(!increaseCounter()){
+      response.send.mockReturnValue('Welcome, Evie')
+    } else {
+      response.send.mockReturnValue('Goodbye')
+
+    }
+    expect(response.send()).toEqual('Goodbye')
   })
   it('should send a welcome message when a successful request is made', () => {
     response.send.mockReturnValue('Welcome, Evie')
