@@ -2008,3 +2008,28 @@
   message: 'Goodbye message sent',
   timestamp: '2020-07-24T09:45:14.729Z'
 }
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-24T11:30:14.645Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-24T11:30:14.648Z'
+}
+{
+  level: 'debug',
+  message: '200: Successfully sent returned employee',
+  timestamp: '2020-07-24T11:30:14.666Z'
+}
+{
+  level: 'debug',
+  message: 'reached routers pages',
+  timestamp: '2020-07-24T11:30:26.877Z'
+}
+{
+  level: 'debug',
+  message: 'Reached controller',
+  timestamp: '2020-07-24T11:30:26.877Z'
+}
